@@ -1,3 +1,25 @@
+async function includeHTML() {
+  let includeElements = document.querySelectorAll("[w3-include-html]");
+  for (let i = 0; i < includeElements.length; i++) {
+    const element = includeElements[i];
+    file = element.getAttribute("w3-include-html");
+    let resp = await fetch(file);
+    if (resp.ok) {
+      var html = await resp.text();
+      // console.log(html);
+      element.innerHTML = html;
+    } else {
+      element.innerHTML = "Page not found";
+    }
+  }
+}
+
+includeHTML();
+
+function init() {
+  renderServices();
+}
+
 const services = [
   {
     title: "Vom Einstieg bis zum Ziel komplett erklärt",
@@ -25,7 +47,7 @@ function renderServices() {
   const servicesList = document.querySelector(".road-lists");
   for (let i = 0; i < services.length; i++) {
     const service = services[i];
-    servicesList.innerHTML += /*html*/`
+    servicesList.innerHTML += /*html*/ `
         <li>
           <img class="coin" src="./assets/coin.png" alt="coin">
           <div class="question-answer">
@@ -37,4 +59,9 @@ function renderServices() {
   }
 }
 
-renderServices();
+
+function openMenu() {
+  document.querySelector(".hamburger").classList.toggle("is-active")
+  document.querySelector(".menu-list").classList.toggle("show-menu")
+
+}
