@@ -1,4 +1,5 @@
 @import "./resets.css";
+@import "../node_modules/hamburgers/dist/hamburgers.css";
 
 
 :root {
@@ -377,7 +378,7 @@ footer nav ul li a {
       transition: all 175ms ease-in-out;
       gap: 3.25rem;
       overflow-x: hidden;
-      z-index: 5;
+      z-index: 1;
     }
   
     .main-nav button {
@@ -388,11 +389,11 @@ footer nav ul li a {
       width: 100%;
     }
   
-    /* .main-nav .pos-fix-hamburger {
+    .main-nav .pos-fix-hamburger {
       position: fixed;
       top: 0.9375rem;
-      right: 0.3125rem;
-    } */
+      right: 3.4125rem;
+    }
   
     /* .main-nav .pos-fix-logo {
       position: fixed;
