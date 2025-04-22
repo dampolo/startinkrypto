@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Krypto</title>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="main-nav" id="aside-main-nav">
+    
+            <a href="/" class="logo pos-fix-logo">
+                <img src="/assets/logoStartKrypto.png" alt='logo'>
+            </a>
+    
+            <ul>
+                <li>
+                    <a href="/" class="link">
+                        Über mich
+                    </a>
+                </li>
+                <li>
+                    <a href="/" class="link">
+                        Emfehlung
+                    </a>
+                </li>
+                <li>
+                    <a href="/" class="link">
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+            
+            <button (click)="openMenu()" class="hamburger hamburger--collapse" type="button" [ngClass]="{'is-active': isMenuOpen, 'pos-fix-hamburger': posFixBurger }">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </nav>
+    </header>
+
+
+    <section class="welcome">
+        <div class="welcome-content">
+
+            <ul class="coin-left">
+                <li>
+                    <a href="https://coinmarketcap.com/de/currencies/bitcoin/" target="_blank" rel="noopener noreferrer">
+                        <img class="coin" src="./assets/bitcoin.svg" alt="Bitocin">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://coinmarketcap.com/de/currencies/ethereum/" target="_blank" rel="noopener noreferrer">
+                        <img class="coin" src="./assets/ethereum.svg" alt="Ethereum">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://coinmarketcap.com/de/currencies/solana/" target="_blank" rel="noopener noreferrer">
+                        <img class="coin" src="./assets/solana.svg" alt="Solana">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="welcome-text">
+                <h1>WILLKOMMEN </h1> 
+                bei <br>
+                <h1><strong><span class="start">S</span>tart <span class="krypto">K</span>rypto</strong></h1>
+            </div>
+        
+            <ul class="coin-right">
+                <li>
+                    <a href="https://coinmarketcap.com/de/currencies/bittensor/" target="_blank" rel="noopener noreferrer">
+                        <img class="coin" src="./assets/tao.svg" alt="TAO">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://coinmarketcap.com/de/currencies/kaspa/" target="_blank" rel="noopener noreferrer">
+                        <img class="coin" src="./assets//kaspa.svg" alt="Kaspa">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://coinmarketcap.com/de/currencies/chainlink/" target="_blank" rel="noopener noreferrer">
+                        <img class="coin" src="./assets/chainlink.svg" alt="Chainlink">
+                    </a>
+                </li>
+            </div>
+            </ul>
+    </section>
+
+    <section class="service">
+        <div class="service-content">
+            
+            <h1 class="service-title">Mein Angebot</h1>
+            <img class="my-offer
+            " src="./assets/my-offer.png" alt="my offer">
+
+            <div class="service-description">
+                <p>
+                    Du möchtest in Bitcoin oder andere Krypto-Assets investieren, weißt aber nicht, wo und wie du anfangen sollst?
+                </p>
+                <p>
+                    Du hättest gerne jemanden, der dich persönlich in die Krypto-Welt Schritt für Schritt einführt?
+                </p>
+                <!-- <p>
+                    Du möchtest eine persönliche Anleitung für deine ersten Schritte?
+                </p> -->
+                <p>
+                    Du möchtest schnell und sicher in den Krypto-Space einsteigen?
+                </p>
+                
+                <!-- <p class="quote">
+                    "Es muss erst schlimmer werden, bevor es besser wird"
+                </p> -->
+                <p class="strong-puls"><strong>Dann bist du hier genau richtig.</strong></p>
+                
+                <p>
+                    Ich nehme dich gerne an die Hand und gehe in einer persönlichen 1:1-Betreung die ersten und wichtigsten Schritte mit dir.
+                </p>
+
+            </div>
+            
+        </div>
+        
+    </section>
+    
+    <section class="road">
+        
+        <div class="road-content">
+
+            <h1 class="road-title">
+                Dein Weg
+            </h1>
+                
+            <img class="your-way" src="./assets/your-way.jpg" alt="you way">
+            <ul class="road-lists">
+            </ul>
+
+                
+        </div>
+            
+    </section>
+
+    <section class="contact">
+        <div class="contact-content">
+            <h1 class="contact-title">
+                Kontakt
+            </h1>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://">Impressum</a>
+                </li>
+                <li>
+                    <a href="http://">Datenschutz</a>
+                </li>
+            </ul>
+
+            <ul class="social-media">
+                <li>
+                    <a href="http://">
+                        <img src="./assets/instagram.svg" alt="instagram">
+                    </a>
+                </li>
+                
+                <!-- <svg>
+                 <use href="/assets/instagram.svg#instagram"/>
+                </svg> -->
+            </ul>
+        </nav>
+        <span class="footer-copyright">© 2025 Start Krypto - Dein Einstieg in die Krypto-Welt.</span>
+    </footer>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
