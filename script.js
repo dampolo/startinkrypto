@@ -34,7 +34,7 @@ const services = [
   {
     title: "Kauf deiner ersten Coins",
     description:
-      "Gemeinsam machen wir deinen ersten Krypto-Kauf – einfach und sicher.",
+      "Gemeinsam machen wir deinen ersten Krypto-Kauf, einfach und sicher.",
   },
   {
     title: "Start mit deiner persönlichen Wallet",
@@ -67,8 +67,9 @@ function openMenu() {
 }
 
 function closeMenu(params) {
-  document.querySelector(".menu-list").classList.remove("show-menu")
   document.querySelector(".hamburger").classList.remove("is-active")
+  document.querySelector(".hamburger").classList.remove("pos-fix-hamburger")
   document.querySelector(".menu-list").classList.remove("show-menu")
+
   
 }

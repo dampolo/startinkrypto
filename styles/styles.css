@@ -553,8 +553,8 @@ body {
 
   .main-nav .pos-fix-hamburger {
     position: fixed;
-    top: 0.9375rem;
-    right: 3.4125rem;
+    top: 0.05rem;
+    right: 0.85rem;
   }
 
   /* .main-nav .pos-fix-logo {
