@@ -64,5 +64,11 @@ function openMenu() {
   document.querySelector(".hamburger").classList.toggle("is-active")
   document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger")
   document.querySelector(".menu-list").classList.toggle("show-menu")
+}
 
+function closeMenu(params) {
+  document.querySelector(".menu-list").classList.remove("show-menu")
+  document.querySelector(".hamburger").classList.remove("is-active")
+  document.querySelector(".menu-list").classList.remove("show-menu")
+  
 }
