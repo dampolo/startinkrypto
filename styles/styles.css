@@ -34,6 +34,7 @@ body {
 
 .header,
 .welcome,
+.about-me,
 .service,
 .road,
 .contact,
@@ -45,6 +46,12 @@ body {
   margin-bottom: 1.25rem;
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 .main-nav {
   display: flex;
   align-items: center;
@@ -52,9 +59,7 @@ body {
   height: 7rem;
   max-width: var(--max-width);
   width: 100%;
-  margin-inline: 3.125rem;
   padding-inline: 3.125rem;
-
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }
@@ -167,20 +172,24 @@ body {
 }
 
 /* WELCOME */
-.welcome-content {
+.welcome {
+  height: 100vh;
+}
+.welcome-content-main {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: fit-content;
+  height: 100%;
   max-width: var(--max-width);
-  width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
   margin-inline: 1rem;
+  position: relative;
 }
 
-.welcome .welcome-content .welcome-text {
+.welcome .welcome-content-main .welcome-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,23 +197,27 @@ body {
   font-size: 3.5rem;
 }
 
-.welcome .welcome-content .welcome-text h1 {
+.welcome .welcome-content-main .welcome-text h1 {
   font-size: clamp(1rem, 6vw, 3rem);
   text-align: center;
 }
 
-.welcome .welcome-content .welcome-text p {
+.welcome .welcome-content-main .welcome-text p {
   font-size: clamp(0.5rem, 4vw, 1.5rem);
   text-align: center;
   padding-inline: 2rem;
 }
 
-.welcome .welcome-content .welcome-text .start {
+.welcome .welcome-content-main .welcome-text .start {
   color: var(--primary);
 }
 
-.welcome .welcome-content .welcome-text .krypto {
+.welcome .welcome-content-main .welcome-text .krypto {
   color: var(--secondary);
+}
+
+.welcome-welcome {
+  display: flex;
 }
 
 .coin-left,
@@ -213,6 +226,7 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
+
 .coin-left li,
 .coin-right li {
   transform: scale(1);
@@ -226,6 +240,55 @@ body {
 
 .coin {
   width: 8rem;
+}
+.about-me {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.about-me .about-me-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  max-width: var(--max-width);
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-inline: 1rem;
+}
+
+.about-me .about-me-content .about-me-bitcoin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  width: 11.5rem;
+  height: 11.5rem;
+  position: absolute;
+  top: -5rem;
+}
+
+.about-me .about-me-content .about-me-bitcoin .about-me-kaspa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 11rem;
+  height: 11rem;
+}
+
+.about-me .about-me-content img {
+  border-radius: 50%;
+  width: 10.5rem;
+}
+
+.about-me .about-me-description {
+ margin-top: 5rem;
 }
 
 .service-content {
@@ -320,6 +383,8 @@ body {
 
 .road-content .road-lists .question {
   font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
 .road-content .service-lists .answer {
@@ -383,6 +448,10 @@ body {
   width: 2rem;
 }
 
+.footer .footer-copyright {
+  font-size: clamp(0.1rem, 3vw, 1rem);
+}
+
 .imprint {
   flex: 1; /*footer under*/
 }
@@ -441,7 +510,9 @@ body {
 @media (width < 1400px) {
   .main-nav {
     height: 5.3125rem;
-    margin: 0 0.4rem 0 0.5rem;
+    /* margin: 0 0.4rem 0 0.5rem; */
+    padding-inline: 0;
+
   }
 
   .main-nav ul {
@@ -490,7 +561,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  .welcome-content {
+  .welcome-welcome {
     flex-direction: column;
   }
   .welcome .welcome-content .welcome-text {
