@@ -291,6 +291,11 @@ body {
  margin-top: 5rem;
 }
 
+.about-me-description p:nth-child(3) {
+  text-align: justify;
+  hyphens: auto;
+}
+
 .service-content {
   display: flex;
   flex-direction: column;
@@ -314,6 +319,7 @@ body {
   height: 20rem;
   border-radius: 10%;
   margin-bottom: 2rem;
+  object-fit: cover;
 }
 
 .service-content .service-description {
@@ -337,6 +343,11 @@ body {
 .service-content .service-description .strong-puls {
   margin-block: 1rem;
 }
+
+.service-detials {
+  list-style-type: disclosure-closed;
+}
+
 
 /* ROAD */
 .road-content {
@@ -481,7 +492,7 @@ body {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 7rem 2rem 2rem 2rem;
   margin-inline: 1rem;
   position: relative;
 }
@@ -511,7 +522,7 @@ body {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   margin-inline: 1rem;
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 7rem 2rem 2rem 2rem;
   margin-inline: 1rem;
   position: relative;
 }
@@ -588,6 +599,11 @@ body {
     gap: 1rem;
     margin-block: 1rem;
     padding-top: 0;
+  }
+
+  .imprint-content,
+  .legacy-content {
+    padding: 5rem 2rem 2rem 2rem;
   }
 
   .welcome .welcome-content .welcome-text p {

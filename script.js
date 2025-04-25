@@ -5,8 +5,8 @@ async function includeHTML() {
     file = element.getAttribute("w3-include-html");
     let resp = await fetch(file);
     if (resp.ok) {
-      var html = await resp.text();
-      // console.log(html);
+      let html = await resp.text();
+      console.log(html);
       element.innerHTML = html;
     } else {
       element.innerHTML = "Page not found";
