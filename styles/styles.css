@@ -191,6 +191,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  padding-top: 4rem;
   font-size: 3.5rem;
 }
 
@@ -311,7 +312,7 @@ body {
 
 .service-content .my-offer {
   height: 20rem;
-  border-radius: 50%;
+  border-radius: 10%;
   margin-bottom: 2rem;
 }
 
@@ -586,6 +587,7 @@ body {
   .welcome .welcome-content .welcome-text {
     gap: 1rem;
     margin-block: 1rem;
+    padding-top: 0;
   }
 
   .welcome .welcome-content .welcome-text p {
