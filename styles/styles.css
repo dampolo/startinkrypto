@@ -566,6 +566,21 @@ iframe html body .branding-free-triangle {
   word-break: break-all;
 }
 
+.active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--body-bg);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 @media (max-width: 950px) {
   .main-nav ul {
     flex-direction: column;

@@ -1,19 +1,28 @@
 async function includeHTML() {
-  let includeElements = document.querySelectorAll("[w3-include-html]");
+  const includeElements = document.querySelectorAll("[w3-include-html]");
+  const errorActive = document.querySelector(".error");
+  const errorType = document.querySelector(".error-type");
+
   for (let i = 0; i < includeElements.length; i++) {
     const element = includeElements[i];
     const file = element.getAttribute("w3-include-html");
-    const resp = await fetch(file);
-    if (resp.ok) {
-      let html = await resp.text();
-      element.innerHTML = html;
-    } else {
-      element.innerHTML = "Page not found";
-    }
+    try {
+      const resp = await fetch(file);
+      if (resp.ok) {
+        const html = await resp.text();
+        element.innerHTML = html;
+      } else {
+        errorActive.classList.add("active")
+        errorType.innerHTML = /*html*/ `<div>ERROR ${resp.status}</div>`;
+      }
+    } catch (error) {
+      errorActive.classList.add("active")
+      }
   }
 }
 
 includeHTML();
+
 
 function init() {
   renderServices();
