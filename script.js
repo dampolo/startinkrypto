@@ -12,17 +12,17 @@ async function includeHTML() {
         const html = await resp.text();
         element.innerHTML = html;
       } else {
-        errorActive.classList.add("active")
+        errorActive.classList.add("active");
         errorType.innerHTML = /*html*/ `<div>ERROR ${resp.status}</div>`;
       }
     } catch (error) {
-      errorActive.classList.add("active")
-      }
+      errorActive.classList.add("active");
+      errorType.innerHTML = /*html*/ `<div>ERROR ${error.message}</div>`;
+    }
   }
 }
 
 includeHTML();
-
 
 function init() {
   renderServices();
@@ -67,17 +67,14 @@ function renderServices() {
   }
 }
 
-
 function openMenu() {
-  document.querySelector(".hamburger").classList.toggle("is-active")
-  document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger")
-  document.querySelector(".menu-list").classList.toggle("show-menu")
+  document.querySelector(".hamburger").classList.toggle("is-active");
+  document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
+  document.querySelector(".menu-list").classList.toggle("show-menu");
 }
 
 function closeMenu(params) {
-  document.querySelector(".hamburger").classList.remove("is-active")
-  document.querySelector(".hamburger").classList.remove("pos-fix-hamburger")
-  document.querySelector(".menu-list").classList.remove("show-menu")
-
-  
+  document.querySelector(".hamburger").classList.remove("is-active");
+  document.querySelector(".hamburger").classList.remove("pos-fix-hamburger");
+  document.querySelector(".menu-list").classList.remove("show-menu");
 }
