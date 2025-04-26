@@ -15,6 +15,9 @@
   --box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
   --letter-color: #2f4858;
   --first-transition: all 200ms ease-in-out;
+  --content-color: #e2dbc6;
+  --welcome: #FAFAFA;
+  --footer:#e1e1e1;
 }
 
 @font-face {
@@ -53,6 +56,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  background-color: #f4f4f5;
 }
 
 .main-nav {
@@ -186,6 +190,7 @@ body {
   padding: 7rem 2rem 2rem 2rem ;
   margin-inline: 1rem;
   position: relative;
+  background-color: var(--welcome);
 }
 
 .welcome .welcome-content-main .welcome-text {
@@ -302,7 +307,8 @@ body {
 
 /* SERVICE */
 
-.service-content {
+.service-content,
+.road-content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -314,6 +320,7 @@ body {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   margin-inline: 1rem;
+  background-color: var(--content-color);
 }
 
 .service-title {
@@ -355,19 +362,6 @@ body {
 
 
 /* ROAD */
-.road-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: fit-content;
-  max-width: var(--max-width);
-  width: 100%;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  padding: 2rem;
-  margin-inline: 1rem;
-}
 
 .road-title {
   margin-bottom: 1.25rem;
@@ -420,6 +414,7 @@ body {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   margin-inline: 1rem;
+  background-color: var(--content-color);
 }
 
 .contact-title {
@@ -464,7 +459,8 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 2rem;
-  background-color: #f4f4f5;
+  /* background-color: #f4f4f5; */
+  background-color: var(--footer);
   margin-bottom: 0;
 }
 
