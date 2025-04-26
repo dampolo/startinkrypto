@@ -40,12 +40,14 @@ body {
 .contact,
 .footer,
 .imprint,
+.appointment,
 .legacy {
   display: flex;
   justify-content: center;
   margin-bottom: 1.25rem;
 }
 
+/* HEADER */
 .header {
   position: absolute;
   top: 0;
@@ -241,6 +243,8 @@ body {
 .coin {
   width: 8rem;
 }
+
+/* ABOUT ME */
 .about-me {
   position: relative;
   margin-top: 7rem;
@@ -295,6 +299,8 @@ body {
   text-align: justify;
   hyphens: auto;
 }
+
+/* SERVICE */
 
 .service-content {
   display: flex;
@@ -402,6 +408,7 @@ body {
   font-size: 1rem;
 }
 
+/* CONTACT */
 .contact-content {
   display: flex;
   flex-direction: column;
@@ -427,14 +434,35 @@ body {
   gap: 2rem;
 }
 
-/* .whatsapp-link {
-  width: 10rem;
-} */
-
 .qr-code {
   width: 6rem;
 }
 
+.contact-appointment {
+  border: solid 2px var(--secondary);
+  background-color: var(--primary);
+  color: #000000;
+  border-radius: var(--border-radius);
+  display: flex;
+  margin: 2rem;
+  padding: 0.5rem;
+  transition: var(--first-transition);
+}
+
+.contact-appointment:hover {
+  border: solid 2px var(--primary);
+  color: #ffff;
+}
+
+.contact-appointment:hover svg path {
+  color: #ffff;
+}
+
+iframe html body .branding-free-triangle {
+  display: none !important;
+}
+
+/* FOOTER */
 .footer {
   display: flex;
   flex-direction: column;
@@ -477,10 +505,12 @@ body {
   font-size: clamp(0.1rem, 3vw, 1rem);
 }
 
+.appointment,
 .imprint {
   flex: 1; /*footer under*/
 }
 
+.appointment-content,
 .imprint-content {
   display: flex;
   flex-direction: column;
@@ -568,11 +598,6 @@ body {
     top: 0.05rem;
     right: 0.85rem;
   }
-
-  /* .main-nav .pos-fix-logo {
-      position: fixed;
-      top: 0.6875rem;
-    } */
 }
 
 @media (max-height: 400px) {
