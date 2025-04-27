@@ -15,8 +15,7 @@
   --box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
   --letter-color: #2f4858;
   --first-transition: all 200ms ease-in-out;
-  --content-color: #e2dbc6;
-  --welcome: #FAFAFA;
+  --content-color: #FAFAFA;
   --footer:#e1e1e1;
 }
 
@@ -190,7 +189,7 @@ body {
   padding: 7rem 2rem 2rem 2rem ;
   margin-inline: 1rem;
   position: relative;
-  background-color: var(--welcome);
+  background-color: var(--content-color);
 }
 
 .welcome .welcome-content-main .welcome-text {
