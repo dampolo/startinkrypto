@@ -296,14 +296,27 @@ body {
 }
 
 .about-me .about-me-description {
- margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  gap: 1rem;
 }
 
-.about-me-description p:nth-child(3) {
+.about-me-description p {
   text-align: justify;
   hyphens: auto;
+  position: relative;
+
 }
 
+.about-me-description p::before {
+  content: "*";
+  position: absolute;
+  left: -24px; /* Or however far you want it from the text */
+  top: 0.2em;
+  width: 5rem;
+  height: 5rem;
+}
 /* SERVICE */
 
 .service-content,
