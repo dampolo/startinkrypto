@@ -32,7 +32,7 @@ const services = [
   {
     title: "Vom Einstieg bis zum Ziel komplett erklärt",
     description:
-      "Ich begleite dich Schritt für Schritt durch die Welt der Kryptowährungen.",
+      "Ich begleite dich Schritt für Schritt durch die Krypto-Welt.",
   },
   {
     title: "Einstieg in die wichtigsten Börsen",
@@ -45,7 +45,7 @@ const services = [
       "Gemeinsam machen wir deinen ersten Krypto-Kauf, einfach und sicher.",
   },
   {
-    title: "Start mit deiner persönlichen Wallet",
+    title: "Start deiner persönlichen Wallet",
     description:
       "Ich zeige dir, wie du eine sichere Wallet einrichtest und nutzt.",
   },

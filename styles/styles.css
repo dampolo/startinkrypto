@@ -290,16 +290,20 @@ body {
   height: 11rem;
 }
 
-.about-me .about-me-content img {
+.about-me-content img {
   border-radius: 50%;
   width: 10.5rem;
 }
 
-.about-me .about-me-description {
+.about-me-description {
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
   gap: 1rem;
+}
+
+.about-me-description h1 {
+  text-align: center;
 }
 
 .about-me-description p {
@@ -341,7 +345,7 @@ body {
 }
 
 .service-content .my-offer {
-  height: 20rem;
+  height: 15rem;
   border-radius: 10%;
   margin-bottom: 2rem;
   object-fit: cover;
@@ -364,8 +368,23 @@ body {
   margin-block: 1rem;
 }
 
-.service-description .strong-puls {
+.strong-plus-container {
+  display: flex;
+  align-items: center;
   margin-block: 1rem;
+  gap: 1rem;
+}
+
+.strong-arrow {
+  transform: rotate(-180deg);
+  width: 2rem;
+}
+
+.strong-help {
+  border: solid .1375rem;
+  border-radius: 1rem;
+  padding: 7px;
+  box-shadow: var(--box-shadow) inset;
 }
 
 .service-detials {
@@ -450,9 +469,13 @@ body {
   color: #000000;
   border-radius: var(--border-radius);
   display: flex;
-  margin: 2rem;
   padding: 0.5rem;
   transition: var(--first-transition);
+  width: fit-content;
+}
+
+.contact-content .contact-appointment {
+  margin: 2rem;
 }
 
 .contact-appointment:hover {
