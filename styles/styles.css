@@ -36,6 +36,7 @@ body {
 
 .header,
 .welcome,
+.quote,
 .about-me,
 .service,
 .road,
@@ -331,6 +332,7 @@ body {
 }
 /* SERVICE */
 
+.quote-content,
 .service-content,
 .road-content {
   display: flex;
@@ -347,6 +349,12 @@ body {
   background-color: var(--content-color);
 }
 
+.quote-content blockquote strong {
+  display: block;
+  text-align: end;
+}
+
+.quote-title,
 .service-title {
   margin-bottom: 1.25rem;
   font-size: 1.5rem;
@@ -358,6 +366,18 @@ body {
   margin-bottom: 2rem;
   object-fit: cover;
 }
+.quote-description {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quote-description img {
+  align-self: self-start;
+  width: 2rem;
+  height: 100%;
+}
+
 .service-description {
   display: flex;
   flex-direction: column;
@@ -477,10 +497,28 @@ body {
   font-size: 1.5rem;
 }
 
-.contact-media {
+.contact-media ul {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+
+.telephone,
+.email {
+  display: flex;
+  gap: 1rem;
+  color: inherit;
+}
+
+.telephone a,
+.email a{
+  color: inherit;
+}
+
+.telephone a:hover,
+.email a:hover{
+  text-decoration: underline;
 }
 
 .qr-code {
