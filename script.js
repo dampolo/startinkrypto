@@ -93,7 +93,6 @@ function openMenu() {
     document.querySelector(".hamburger").classList.toggle("is-active");
     document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
     document.querySelector(".menu-list").classList.toggle("show-menu");
-    toggleAriaExpanded()
     toggleAriaLabel()
   });
 }

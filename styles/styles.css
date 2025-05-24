@@ -53,7 +53,7 @@ body, main {
 /* HEADER */
 .header {
   position: absolute;
-  top: 0;
+  top: 0.5rem;
   left: 0;
   right: 0;
   z-index: 1;
@@ -85,7 +85,7 @@ body, main {
 }
 
 .main-nav .logo:focus {
-  border: 2px solid var(--primary);
+  border: 2px dotted var(--primary);
   outline: var(--primary);
 }
 
@@ -115,15 +115,16 @@ body, main {
   line-height: 1.725rem;
   color: inherit;
   transition: all 125ms ease-in;
+  border: .125rem dotted transparent;
 }
 
 .main-nav ul li a:focus {
-  outline: none;
-  border-bottom: 2px solid var(--primary);
+  border: .125rem dotted var(--primary);
+  outline: var(--primary);
 }
 
 .main-nav ul li a:active {
-  border: none;
+  border: .125rem dotted transparent;
 }
 
 .main-nav ul li a::before {
@@ -200,6 +201,7 @@ body, main {
   margin-inline: 1rem;
   position: relative;
   background-color: var(--content-color);
+  margin-top: 0.5rem;
 }
 
 .welcome .welcome-content-main .welcome-text {
@@ -672,8 +674,9 @@ body, main {
     position: fixed;
     top: 0;
     right: 0;
-    height: 0;
+    height: 50%;
     width: 100%;
+    display: none;
     background-color: var(--body-bg);
     transition: all 175ms ease-in-out;
     gap: 3.25rem;
@@ -685,16 +688,33 @@ body, main {
 
   .main-nav button {
     display: flex;
+    border: 2px dotted transparent;
+
+  }
+
+  .main-nav button:focus-visible {
+    border: 2px dotted var(--primary);
+    outline: var(--primary);
   }
 
   .main-nav .show-menu {
-    height: 50%;
+    display: flex;
+  }
+
+  .remove-menu {
+    display: none;
   }
 
   .main-nav .pos-fix-hamburger {
     position: fixed;
     top: 0.05rem;
     right: 0.85rem;
+    z-index: 2;
+  }
+
+  .main-nav .pos-fix-hamburger:focus-visible {
+    border: 2px dotted var(--primary);
+    outline: var(--primary);
   }
 }
 
