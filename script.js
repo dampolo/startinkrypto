@@ -25,7 +25,6 @@ async function includeHTML() {
 
 includeHTML();
 
-
 function init() {
   renderServices();
 }
@@ -33,8 +32,7 @@ function init() {
 const services = [
   {
     title: "Vom Einstieg bis zum Ziel komplett erklärt",
-    description:
-      "Ich begleite dich Schritt für Schritt durch die Krypto-Welt.",
+    description: "Ich begleite dich Schritt für Schritt durch die Krypto-Welt.",
   },
   {
     title: "Einstieg in die wichtigsten Börsen",
@@ -69,19 +67,28 @@ function renderServices() {
   }
 }
 
-function openMenu() {
-  document.querySelector(".hamburger").classList.toggle("is-active");
-  document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
-  document.querySelector(".menu-list").classList.toggle("show-menu");
+function initEventListeners() {
+  openMenu();
+  closeMenu();
 }
 
-function initEventListeners() {
-    const links = document.querySelectorAll(".link");
+function closeMenu() {
+  const links = document.querySelectorAll(".link");
 
-  links.forEach(link => {
+  links.forEach((link) => {
     link.addEventListener("click", () => {
-      document.querySelector(".hamburger").classList.remove("is-active", "pos-fix-hamburger");
+      document
+        .querySelector(".hamburger")
+        .classList.remove("is-active", "pos-fix-hamburger");
       document.querySelector(".menu-list").classList.remove("show-menu");
     });
+  });
+}
+
+function openMenu() {
+  document.querySelector(".hamburger").addEventListener("click", () => {
+    document.querySelector(".hamburger").classList.toggle("is-active");
+    document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
+    document.querySelector(".menu-list").classList.toggle("show-menu");
   });
 }
