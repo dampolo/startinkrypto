@@ -80,7 +80,10 @@ function closeMenu() {
       document
         .querySelector(".hamburger")
         .classList.remove("is-active", "pos-fix-hamburger");
-      document.querySelector(".menu-list").classList.remove("show-menu");
+        document.querySelector(".menu-list").classList.remove("show-menu");
+        document.querySelector(".hamburger").setAttribute("aria-expanded", "false")
+
+
     });
   });
 }
@@ -90,5 +93,12 @@ function openMenu() {
     document.querySelector(".hamburger").classList.toggle("is-active");
     document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
     document.querySelector(".menu-list").classList.toggle("show-menu");
+    toggleAriaExpanded()
   });
+}
+
+function toggleAriaExpanded() {
+    const hamburger = document.querySelector(".hamburger");
+    const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", (!isExpanded));    
 }
