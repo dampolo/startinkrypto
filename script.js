@@ -20,9 +20,11 @@ async function includeHTML() {
       errorType.innerHTML = /*html*/ `<div>ERROR ${error.message}</div>`;
     }
   }
+  initEventListeners();
 }
 
 includeHTML();
+
 
 function init() {
   renderServices();
@@ -73,8 +75,13 @@ function openMenu() {
   document.querySelector(".menu-list").classList.toggle("show-menu");
 }
 
-function closeMenu(params) {
-  document.querySelector(".hamburger").classList.remove("is-active");
-  document.querySelector(".hamburger").classList.remove("pos-fix-hamburger");
-  document.querySelector(".menu-list").classList.remove("show-menu");
+function initEventListeners() {
+    const links = document.querySelectorAll(".link");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      document.querySelector(".hamburger").classList.remove("is-active", "pos-fix-hamburger");
+      document.querySelector(".menu-list").classList.remove("show-menu");
+    });
+  });
 }
