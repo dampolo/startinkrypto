@@ -441,6 +441,7 @@ body, main {
 
 .service-detials {
   list-style-type: disclosure-closed;
+  margin-bottom: 1rem;
 }
 
 
@@ -539,9 +540,12 @@ body, main {
   color: #000000;
   border-radius: var(--border-radius);
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
   transition: var(--first-transition);
   width: fit-content;
+  gap: 0.5rem;
 }
 
 .contact-content .contact-appointment {
