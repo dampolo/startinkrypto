@@ -79,32 +79,40 @@ function closeMenu() {
     link.addEventListener("click", () => {
       document
         .querySelector(".hamburger")
-        .classList.remove("is-active", "pos-fix-hamburger");
-        document.querySelector(".menu-list").classList.remove("show-menu");
-        document.querySelector(".hamburger").setAttribute("aria-expanded", "false")
-        document.querySelector(".hamburger").setAttribute("aria-label", "Öffne das Menu")
+        .classList.remove("pos-fix-hamburger");
+      document.querySelector(".hamburger").classList.remove("is-active");
 
+      document.querySelector(".menu-list").classList.remove("show-menu");
+      document
+        .querySelector(".hamburger")
+        .setAttribute("aria-expanded", "false");
+      document
+        .querySelector(".hamburger")
+        .setAttribute("aria-label", "Öffne das Menu");
     });
   });
 }
 
 function openMenu() {
-    document.querySelector(".hamburger").addEventListener("click", () => {
+  document.querySelector(".hamburger").addEventListener("click", () => {
     document.querySelector(".hamburger").classList.toggle("is-active");
     document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
     document.querySelector(".menu-list").classList.toggle("show-menu");
-    toggleAriaLabel()
+    toggleAriaLabel();
   });
 }
 
 function toggleAriaExpanded() {
-    const hamburger = document.querySelector(".hamburger");
-    const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
-    hamburger.setAttribute("aria-expanded", !isExpanded);
+  const hamburger = document.querySelector(".hamburger");
+  const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+  hamburger.setAttribute("aria-expanded", !isExpanded);
 }
 
 function toggleAriaLabel() {
-    const hamburger = document.querySelector(".hamburger");
-    const isOpen = hamburger.getAttribute("aria-label") === "Öffne das Menu";
-    hamburger.setAttribute("aria-label", isOpen ? "Schließe das Menu" : "Öffne das Menu");
+  const hamburger = document.querySelector(".hamburger");
+  const isOpen = hamburger.getAttribute("aria-label") === "Öffne das Menu";
+  hamburger.setAttribute(
+    "aria-label",
+    isOpen ? "Schließe das Menu" : "Öffne das Menu"
+  );
 }
