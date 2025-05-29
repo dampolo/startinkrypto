@@ -260,13 +260,25 @@ body, main {
   width: 8rem;
 }
 
+.about-me-content-welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  max-width: var(--max-width);
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border-radius: 50%;
+}
+
 /* ABOUT ME */
 .about-me {
   position: relative;
-  margin-top: 7rem;
 }
 
-.about-me .about-me-content {
+.about-me-content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -280,7 +292,7 @@ body, main {
   margin-inline: 1rem;
 }
 
-.about-me .about-me-content .about-me-bitcoin {
+.about-me-bitcoin {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -288,11 +300,9 @@ body, main {
   border-radius: 50%;
   width: 11.5rem;
   height: 11.5rem;
-  position: absolute;
-  top: -5rem;
 }
 
-.about-me .about-me-content .about-me-bitcoin .about-me-kaspa {
+.about-me-kaspa {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -300,6 +310,11 @@ body, main {
   border-radius: 50%;
   width: 11rem;
   height: 11rem;
+}
+
+.about-me-content-welcome img {
+  border-radius: 50%;
+  width: 10.5rem;
 }
 
 .about-me-content img {
@@ -310,11 +325,12 @@ body, main {
 .about-me-description {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
+  margin-top: 1rem;
+  margin-inline: 2rem;
   gap: 1rem;
 }
 
-.about-me-description h1 {
+.about-me-description {
   text-align: center;
 }
 
@@ -462,6 +478,7 @@ body, main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .road-lists li {

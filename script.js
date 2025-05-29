@@ -37,7 +37,7 @@ const services = [
   {
     title: "Einstieg in die wichtigsten Börsen",
     description:
-      "Du lernst, wie du dich bei seriösen Krypto-Börsen anmeldest und dich zurechtfindest.",
+      "Wir melden Dich bei seriösen Börsen an und ich zeige dir, wie du dich dort zurecht findest",
   },
   {
     title: "Kauf deiner ersten Coins",
