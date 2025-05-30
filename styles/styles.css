@@ -209,7 +209,6 @@ body, main {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  padding-top: 4rem;
   font-size: 3.5rem;
 }
 
@@ -383,7 +382,7 @@ body, main {
 
 .service-content .my-offer {
   height: 15rem;
-  border-radius: 10%;
+  border-radius: 50%;
   margin-bottom: 2rem;
   object-fit: cover;
 }
@@ -468,28 +467,45 @@ body, main {
   text-align: center;
 }
 
+.road-title-you-way {
+  font-size: 2.5rem;
+}
+
 .road-content .your-way {
   border-radius: 50%;
   height: 20rem;
   margin-bottom: 2rem;
+  object-fit: cover;
 }
+
+.short-description {
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
 
 .road-lists {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .road-lists li {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+  flex-basis: 300px;
 }
 
 .road-lists li .coin {
   height: 5rem;
   width: auto;
+  align-self: flex-start;
 }
 
 .road-lists .question {
@@ -768,7 +784,7 @@ body, main {
   .welcome-welcome {
     flex-direction: column;
   }
-  .welcome .welcome-content .welcome-text {
+  .welcome-content .welcome-text {
     gap: 1rem;
     margin-block: 1rem;
     padding-top: 0;
@@ -779,12 +795,12 @@ body, main {
     padding: 5rem 2rem 2rem 2rem;
   }
 
-  .welcome .welcome-content .welcome-text p {
+  .welcome-content .welcome-text p {
     padding-inline: 0;
   }
 
   .welcome-content-main {
-    padding: 5rem 0.5rem 0.5rem 0.5rem;
+    padding: 5rem 1rem 0.5rem 1rem;
   }
 
   .coin-left,

@@ -31,13 +31,9 @@ function init() {
 
 const services = [
   {
-    title: "Vom Einstieg bis zum Ziel komplett erklärt",
-    description: "Ich begleite dich Schritt für Schritt durch die Krypto-Welt.",
-  },
-  {
-    title: "Einstieg in die wichtigsten Börsen",
+    title: "Die wichtigsten Börsen",
     description:
-      "Wir melden Dich bei seriösen Börsen an und ich zeige dir, wie du dich dort zurecht findest",
+      "Zusammen melden wir Dich bei seriösen Börsen an und ich zeige dir, wie du dich dort zurecht findest.",
   },
   {
     title: "Kauf deiner ersten Coins",
@@ -45,7 +41,7 @@ const services = [
       "Gemeinsam machen wir deinen ersten Krypto-Kauf, einfach und sicher.",
   },
   {
-    title: "Start deiner persönlichen Wallet",
+    title: "Deine persönliche Wallet",
     description:
       "Ich zeige dir, wie du eine sichere Wallet einrichtest und nutzt.",
   },
