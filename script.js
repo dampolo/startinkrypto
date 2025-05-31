@@ -129,7 +129,7 @@ function handleSpaceClick() {
    links.forEach(link => {
     link.addEventListener("keydown", (event) => {
       
-      if(event.code === "Space") {
+      if(event.code === "Space" || event.key === " " || event.code === "Enter") {
         handleCloseMenu();
         link.click();
       }
