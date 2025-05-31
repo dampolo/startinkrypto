@@ -67,6 +67,7 @@ function initEventListeners() {
   openMenu();
   closeMenu();
   handleLastLinkFocus();
+  handleSpaceClick();
 }
 
 function closeMenu() {
@@ -82,7 +83,6 @@ function closeMenu() {
 function handleCloseMenu() {
       document.querySelector(".hamburger").classList.remove("pos-fix-hamburger");
       document.querySelector(".hamburger").classList.remove("is-active");
-
       document.querySelector(".menu-list").classList.remove("show-menu");
       document.querySelector(".hamburger").setAttribute("aria-expanded", "false");
       document.querySelector(".hamburger").setAttribute("aria-label", "Öffne das Menu");
@@ -120,5 +120,19 @@ function handleLastLinkFocus() {
 
    lastLink.addEventListener("blur" , () => {
     handleCloseMenu()
+   })
+}
+
+function handleSpaceClick() {
+   const links = document.querySelectorAll(".link");  
+  
+   links.forEach(link => {
+    link.addEventListener("keydown", (event) => {
+      
+      if(event.code === "Space") {
+        handleCloseMenu();
+        link.click();
+      }
+    })
    })
 }
