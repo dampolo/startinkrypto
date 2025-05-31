@@ -66,6 +66,7 @@ function renderServices() {
 function initEventListeners() {
   openMenu();
   closeMenu();
+  handleLastLinkFocus();
 }
 
 function closeMenu() {
@@ -73,20 +74,18 @@ function closeMenu() {
 
   links.forEach((link) => {
     link.addEventListener("click", () => {
-      document
-        .querySelector(".hamburger")
-        .classList.remove("pos-fix-hamburger");
+      handleCloseMenu();
+    });
+  });
+}
+
+function handleCloseMenu() {
+      document.querySelector(".hamburger").classList.remove("pos-fix-hamburger");
       document.querySelector(".hamburger").classList.remove("is-active");
 
       document.querySelector(".menu-list").classList.remove("show-menu");
-      document
-        .querySelector(".hamburger")
-        .setAttribute("aria-expanded", "false");
-      document
-        .querySelector(".hamburger")
-        .setAttribute("aria-label", "Öffne das Menu");
-    });
-  });
+      document.querySelector(".hamburger").setAttribute("aria-expanded", "false");
+      document.querySelector(".hamburger").setAttribute("aria-label", "Öffne das Menu");
 }
 
 function openMenu() {
@@ -112,4 +111,14 @@ function toggleAriaLabel() {
     "aria-label",
     isOpen ? "Schließe das Menu" : "Öffne das Menu"
   );
+}
+
+
+function handleLastLinkFocus() {
+   const links = document.querySelectorAll(".link");  
+   const lastLink = links[links.length - 1];
+
+   lastLink.addEventListener("blur" , () => {
+    handleCloseMenu()
+   })
 }

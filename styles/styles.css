@@ -186,6 +186,10 @@ body, main {
   z-index: 1;
 }
 
+.main-nav .pos-fix-hamburger {
+
+}
+
 /* WELCOME */
 
 .welcome-content-main {
@@ -740,6 +744,9 @@ body, main {
 }
 
 @media (max-width: 950px) {
+  .main-nav {
+    padding-inline: 1rem;
+  }
   .main-nav ul {
     flex-direction: column;
     align-items: center;
@@ -774,15 +781,15 @@ body, main {
     display: flex;
   }
 
-  .remove-menu {
-    display: none;
-  }
-
   .main-nav .pos-fix-hamburger {
     z-index: 4;
     position: fixed;
-    right: 16px;
-    top: 3px
+    right: 32px;
+    top: 19px
+  }
+
+  .remove-menu {
+    display: none;
   }
 
   .main-nav .pos-fix-hamburger:focus-visible {
@@ -799,6 +806,8 @@ body, main {
 }
 
 @media (max-width: 500px) {
+
+
   .main-nav {
     height: 3rem;
     padding-inline: 0;
@@ -808,6 +817,11 @@ body, main {
     height: 3rem;
   }
 
+  .main-nav .pos-fix-hamburger {
+    right: 16px;
+    top: 3px
+  }
+  
   .welcome-welcome {
     flex-direction: column;
   }
