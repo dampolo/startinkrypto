@@ -126,13 +126,15 @@ function handleLastLinkFocus() {
 function handleSpaceClick() {
    const links = document.querySelectorAll(".link");  
   
-   links.forEach(link => {
+  links.forEach(link => {
     link.addEventListener("keydown", (event) => {
-      
-      if(event.code === "Space" || event.key === " " || event.code === "Enter") {
-        handleCloseMenu();
+      if (event.code === "Space" || event.key === " ") {
+        event.preventDefault();
         link.click();
+        handleCloseMenu();
+      } else if (event.code === "Enter") {
+        handleCloseMenu();
       }
-    })
-   })
+    });
+  });
 }
