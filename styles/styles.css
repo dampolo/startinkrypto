@@ -17,6 +17,7 @@
   --first-transition: all 200ms ease-in-out;
   --content-color: #FAFAFA;
   --footer:#e1e1e1;
+  --focus: 2px dotted var(--primary);
 }
 
 @font-face {
@@ -184,10 +185,6 @@ body, main {
   display: none;
   background: none;
   z-index: 1;
-}
-
-.main-nav .pos-fix-hamburger {
-
 }
 
 /* WELCOME */
@@ -447,6 +444,11 @@ body, main {
   width: 2rem;
 }
 
+.strong-plus-container a:focus,
+.strong-plus-container a:focus-visible {
+  outline: var(--focus);
+}
+
 .legacy-content a .strong-arrow,
 .imprint-content a .strong-arrow,
 .appointment-content a .strong-arrow {
@@ -620,9 +622,16 @@ body, main {
   color: inherit;
 }
 
+
+
 .telephone a:hover,
 .email a:hover{
   text-decoration: underline;
+}
+
+.telephone a:focus,
+.email a:focus{
+    outline: var(--focus);
 }
 
 .qr-code {
@@ -641,6 +650,11 @@ body, main {
   transition: var(--first-transition);
   width: fit-content;
   gap: 0.5rem;
+}
+
+.contact-appointment:focus {
+  outline: var(--focus);
+
 }
 
 .contact-content .contact-appointment {
