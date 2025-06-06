@@ -68,6 +68,7 @@ function initEventListeners() {
   closeMenu();
   handleLastLinkFocus();
   handleSpaceClick();
+  handleCloseMenuOnLogo();
 }
 
 function closeMenu() {
@@ -86,6 +87,12 @@ function handleCloseMenu() {
       document.querySelector(".menu-list").classList.remove("show-menu");
       document.querySelector(".hamburger").setAttribute("aria-expanded", "false");
       document.querySelector(".hamburger").setAttribute("aria-label", "Öffne das Menu");
+}
+
+function handleCloseMenuOnLogo() {
+  document.querySelector(".logo").addEventListener("focus", () => {
+    handleCloseMenu()
+  })
 }
 
 function openMenu() {
