@@ -125,22 +125,47 @@ function handleLastLinkFocus() {
    const links = document.querySelectorAll(".link");  
    const lastLink = links[links.length - 1];
 
-   lastLink.addEventListener("blur" , () => {
-    handleCloseMenu()
-   })
+    let isShiftTab = false;
+
+    lastLink.addEventListener("keydown", (event) => {
+      if(event.key === "Tab" && event.shiftKey) {
+        isShiftTab = true
+      } else {
+        isShiftTab = false
+      }
+    })
+
+    lastLink.addEventListener("blur", () => {
+      if(!isShiftTab) {
+        handleCloseMenu();
+      }
+    })
 }
 
 function handleSpaceClick() {
-   const links = document.querySelectorAll(".link");  
-  
+  const links = document.querySelectorAll(".link");
+
   links.forEach(link => {
     link.addEventListener("keydown", (event) => {
-      if (event.code === "Space" || event.key === " ") {
-        event.preventDefault();
+      if (event.key === "Tab" && event.shiftKey) {
+        return;
+      }
+
+      // If Space is pressed (without Shift), trigger click
+      if ((event.code === "Space" || event.key === " ") && !event.shiftKey) {
+        event.preventDefault(); // Prevent page scrolling
         link.click();
+        console.log("click Space");
         handleCloseMenu();
-      } else if (event.code === "Enter") {
+        
+
+      }
+
+      // If Enter is pressed (without Shift+Tab)
+      if (event.key === "Enter" || event.code === "Enter") {
+        console.log("click Enter");
         handleCloseMenu();
+
       }
     });
   });
