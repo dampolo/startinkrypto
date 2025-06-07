@@ -427,7 +427,6 @@ figcaption {
   transform: scale(1.1);
 }
 .strong-arrow {
-  transform: rotate(-180deg);
   width: 2rem;
 }
 
@@ -439,7 +438,7 @@ figcaption {
 .legacy-content a .strong-arrow,
 .imprint-content a .strong-arrow,
 .appointment-content a .strong-arrow {
-  transform: rotate(0deg);
+  transform: rotate(-180deg);
   width: 2rem;
 }
 
@@ -728,7 +727,6 @@ figcaption {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   padding: 7rem 2rem 2rem 2rem;
-  margin-inline: 1rem;
   position: relative;
 }
 
