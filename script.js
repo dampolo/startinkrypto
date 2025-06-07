@@ -29,6 +29,8 @@ function init() {
   renderServices();
 }
 
+
+
 const services = [
   {
     title: "Die wichtigsten Börsen",
@@ -155,15 +157,13 @@ function handleSpaceClick() {
       if ((event.code === "Space" || event.key === " ") && !event.shiftKey) {
         event.preventDefault(); // Prevent page scrolling
         link.click();
-        console.log("click Space");
         handleCloseMenu();
-        
-
       }
 
       // If Enter is pressed (without Shift+Tab)
       if (event.key === "Enter" || event.code === "Enter") {
-        console.log("click Enter");
+        console.log(event.code);
+        
         handleCloseMenu();
 
       }
