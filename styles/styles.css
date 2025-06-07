@@ -25,14 +25,18 @@
   src: url("../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
 }
 
-body, main {
-  display: flex;
-  flex-direction: column;
+body {
   font-family: "Inter";
   font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
   background-color: var(--body-bg);
   min-height: calc(100vh - 177px);
   color: var(--letter-color);
+  margin-inline: 1rem;
 }
 
 .header,
@@ -42,7 +46,6 @@ body, main {
 .service,
 .road,
 .contact,
-.footer,
 .imprint,
 .appointment,
 .legacy {
@@ -298,7 +301,6 @@ body, main {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
-  margin-inline: 1rem;
 }
 
 .about-me-img {
@@ -360,7 +362,6 @@ figcaption {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
-  margin-inline: 1rem;
   background-color: var(--content-color);
 }
 
@@ -580,7 +581,6 @@ figcaption {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
-  margin-inline: 1rem;
   background-color: var(--content-color);
 }
 
