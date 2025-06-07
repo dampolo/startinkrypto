@@ -70,6 +70,7 @@ h6 {
 a, button {
   text-decoration: none;
   cursor: pointer;
+  color: black;
 }
 
 ul {
