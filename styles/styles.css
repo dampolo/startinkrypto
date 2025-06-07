@@ -189,10 +189,9 @@ body, main {
 
 /* WELCOME */
 
-.welcome-content-main {
+.welcome {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
   max-width: var(--max-width);
@@ -202,7 +201,7 @@ body, main {
   margin-inline: 1rem;
   position: relative;
   background-color: var(--content-color);
-  margin-top: 0.5rem;
+  margin: 0.5rem auto 1rem auto;
 }
 
 .welcome-text {
