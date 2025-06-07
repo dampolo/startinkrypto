@@ -202,6 +202,7 @@ body, main {
   position: relative;
   background-color: var(--content-color);
   margin: 0.5rem auto 1rem auto;
+  gap: 1rem;
 }
 
 .welcome-text {
@@ -268,8 +269,8 @@ body, main {
   max-width: var(--max-width);
   width: 100%;
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
   border-radius: 50%;
+  gap: 1rem;
 }
 
 /* ABOUT ME */
@@ -303,13 +304,14 @@ body, main {
 .about-me-img {
   border: .25rem solid var(--primary); /* Inner border */
   box-shadow: 0 0 0 .25rem var(--secondary); /* Outer border */
-}
-
-.about-me-content-welcome img {
   border-radius: 50%;
   width: 10.5rem;
 }
 
+figcaption {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 .about-me-content img {
   border-radius: 50%;
   width: 10.5rem;
