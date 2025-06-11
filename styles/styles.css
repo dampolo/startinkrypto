@@ -52,6 +52,7 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 /* HEADER */
@@ -61,7 +62,6 @@ main {
   left: 0;
   right: 0;
   z-index: 1;
-  margin-inline: 1rem;
 }
 
 .main-nav {
@@ -74,6 +74,7 @@ main {
   padding-inline: 3.125rem;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
+  margin-inline: 1rem
 }
 
 .main-nav .logo {
@@ -173,7 +174,6 @@ main {
 }
 
 .main-nav ul .languages button:focus {
-  /* outline: var(--primary); */
   font-weight: 700;
 }
 
@@ -197,6 +197,7 @@ main {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  width: 100%;
   max-width: var(--max-width);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -208,24 +209,53 @@ main {
   gap: 1rem;
 }
 
-.welcome-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  font-size: 3.5rem;
-}
-
-.welcome-text h1 {
-  font-size: clamp(1rem, 9vw, 3rem);
+.welcome .content h1 {
   text-align: center;
 }
 
-.welcome-text p {
+.welcome .content {
   font-size: clamp(0.5rem, 4vw, 1.5rem);
   text-align: center;
   padding-inline: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    'kaspa1 kaspa2 kaspa3'
+    'welcome welcome welcome'
+    'description description description'
+    'bitcoin1 bitcoin2 bitcoin3'
+  ;
 }
+
+.content h1 {
+  grid-area: welcome;
+}
+
+.content p {
+  grid-area: description;
+  max-width: 31.25rem;
+  margin: auto;
+}
+
+.top-left {
+  grid-area: kaspa1;
+}
+
+.top-right {
+  grid-area: kaspa3;
+}
+
+.bottom-left {
+  grid-area: bitcoin1;
+}
+
+.bottom-right {
+  grid-area: bitcoin3;
+}
+
+
 
 .start {
   color: var(--primary);
@@ -235,31 +265,10 @@ main {
   color: var(--secondary);
 }
 
-.welcome-welcome {
-  display: flex;
-}
-
-.coin-left,
-.coin-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.coin-left .coin,
-.coin-right .coin {
-  transform: scale(1);
-  transition: var(--first-transition);
-}
-
-.coin-left .coin:hover,
-.coin-right .coin:hover {
-  transform: scale(1.1);
-}
-
-.coin {
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
   width: 8rem;
 }
 
@@ -288,6 +297,7 @@ main {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    margin-top: -8rem
 }
 
 .about-me-content {
@@ -402,6 +412,7 @@ figcaption {
   align-items: center;
   padding-bottom: 1.25rem;
   margin-inline: 1.5rem;
+  text-align: left;
 }
 
 .service-description p {
@@ -607,8 +618,6 @@ figcaption {
   color: inherit;
 }
 
-
-
 .telephone a:hover,
 .email a:hover{
   text-decoration: underline;
@@ -671,7 +680,6 @@ figcaption {
   align-items: center;
   gap: 1rem;
   padding: 2rem;
-  /* background-color: #f4f4f5; */
   background-color: var(--footer);
   margin-bottom: 0;
 }
@@ -709,8 +717,10 @@ figcaption {
 }
 
 .appointment,
+.legacy,
 .imprint {
-  flex: 1; /*footer under*/
+  flex: 1;
+  margin-top: 0.5rem
 }
 
 .appointment-content,
@@ -851,13 +861,23 @@ figcaption {
     top: 3px
   }
   
-  .welcome-welcome {
-    flex-direction: column;
+  .welcome {
+    padding: 5rem 1rem 2rem 1rem
   }
-  .welcome-content .welcome-text {
-    gap: 1rem;
-    margin-block: 1rem;
-    padding-top: 0;
+
+  .welcome .content {
+    padding-inline: 0;
+  }
+
+  .welcome .content p {
+    padding-inline: 0;
+  }
+
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right {
+    width: 4rem;
   }
 
   .imprint-content,
@@ -865,23 +885,6 @@ figcaption {
     padding: 5rem 2rem 2rem 2rem;
   }
 
-  .welcome-content .welcome-text p {
-    padding-inline: 0;
-  }
-
-  .welcome-content-main {
-    padding: 5rem 1rem 0.5rem 1rem;
-  }
-
-  .coin-left,
-  .coin-right {
-    flex-direction: row;
-    gap: 3rem;
-  }
-
-  .coin {
-    width: 2rem;
-  }
   .service-content .service-description p {
     line-height: 1.5;
   }
@@ -889,5 +892,9 @@ figcaption {
   .road-content .road-lists li {
     flex-direction: column;
     gap: 0;
+  }
+
+  .about-me-welcome {
+    margin-top: -2rem
   }
 }
