@@ -55,9 +55,9 @@ function renderServices() {
     const service = services[i];
     servicesList.innerHTML += /*html*/ `
         <li>
-          <img class="coin" src="./assets/coin.png" alt="coin">
+          <img width="55" height="55" class="coin" src="./assets/bitcoin-coin.svg" alt="">
           <div class="question-answer">
-            <h2 class="question">${service.title}</h2>
+            <strong class="question">${service.title}</strong>
             <p class="answer">${service.description}</p>
           </div>
         </li>

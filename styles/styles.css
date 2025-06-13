@@ -94,6 +94,11 @@ main {
   outline: var(--primary);
 }
 
+.logo:focus:not(:focus-visible) {
+  outline: none;
+  border: 2px solid transparent;
+}
+
 .main-nav .logo img {
   height: 4rem;
   padding: 0.2rem;
@@ -209,18 +214,14 @@ main {
   gap: 1rem;
 }
 
-.welcome .content h1 {
-  text-align: center;
-}
-
 .welcome .content {
   font-size: clamp(0.5rem, 4vw, 1.5rem);
   text-align: center;
   padding-inline: 2rem;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas: 
     'kaspa1 kaspa2 kaspa3'
     'welcome welcome welcome'
@@ -231,6 +232,7 @@ main {
 
 .content h1 {
   grid-area: welcome;
+  text-align: center;
 }
 
 .content p {
@@ -430,13 +432,25 @@ figcaption {
 .strong-plus-container {
   display: flex;
   align-items: center;
-  margin-block: 1rem;
+  margin: 1.5rem;
+  padding: 0.5rem;
   gap: 1rem;
+  font-weight: 600;
 }
 
-.strong-plus-container a:hover {
-  transform: scale(1.1);
+
+.strong-plus-container:hover span {
+  filter: drop-shadow(2px 4px 6px var(--primary));
 }
+
+.strong-plus-container:focus {
+  outline: var(--focus);
+}
+
+.strong-plus-container:not(:focus-visible) {
+  outline: none;
+}
+
 .strong-arrow {
   width: 2rem;
 }
@@ -462,7 +476,7 @@ figcaption {
 .strong-help {
   border: solid .1375rem;
   border-radius: 1rem;
-  padding: 7px;
+  padding: 0.5rem 1.5rem;
   box-shadow: var(--box-shadow) inset;
 }
 
@@ -523,7 +537,7 @@ figcaption {
 }
 
 .road-content {
-  background-image: url("/assets/schillernder.jpg");
+  background-image: url("/assets/schillernder-original.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -558,7 +572,7 @@ figcaption {
 
 .road-lists li {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 1rem;
   flex-basis: 300px;
 }
@@ -706,6 +720,10 @@ figcaption {
 
 .footer nav ul li a {
   color: var(--letter-color);
+}
+
+.footer nav ul li a:focus-visible {
+  outline: var(--focus);
 }
 
 .footer nav .social-media li a img {
