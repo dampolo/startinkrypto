@@ -37,6 +37,7 @@ main {
   min-height: calc(100vh - 177px);
   color: var(--letter-color);
   margin-inline: 1rem;
+  gap: 1rem;
 }
 
 .header,
@@ -51,7 +52,6 @@ main {
 .legacy {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -210,35 +210,37 @@ main {
   margin-inline: 1rem;
   position: relative;
   background-color: var(--content-color);
-  margin: 0.5rem auto 1rem auto;
+  margin: 0.5rem auto 0 auto;
   gap: 1rem;
 }
 
 .welcome .content {
-  font-size: clamp(0.5rem, 4vw, 1.5rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
   padding-inline: 2rem;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 5.25rem 1fr 1fr 5.25rem;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas: 
     'kaspa1 kaspa2 kaspa3'
-    'welcome welcome welcome'
-    'description description description'
+    'welcome1 welcome2 welcome3'
+    'description1 description2 description3'
     'bitcoin1 bitcoin2 bitcoin3'
   ;
 }
 
 .content h1 {
-  grid-area: welcome;
+  grid-area: welcome2;
   text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
 }
 
 .content p {
-  grid-area: description;
+  grid-area: description2;
   max-width: 31.25rem;
   margin: auto;
+  font-size: clamp(0.5rem, 4vw, 1.5rem);
 }
 
 .top-left {
@@ -271,7 +273,9 @@ main {
 .top-right,
 .bottom-left,
 .bottom-right {
-  width: 8rem;
+  width: 5rem;
+  height: fit-content;
+  margin: auto;
 }
 
 .about-me-content-welcome {
@@ -283,7 +287,6 @@ main {
   max-width: var(--max-width);
   width: 100%;
   border-radius: var(--border-radius);
-  border-radius: 50%;
   gap: 1rem;
 }
 
@@ -299,10 +302,10 @@ main {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-    margin-top: -8rem
+    margin-top: -6rem
 }
 
-.about-me-content {
+.about-me {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -313,6 +316,8 @@ main {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
+  gap: 2rem;
+  margin: auto;
 }
 
 .about-me-img {
@@ -359,11 +364,8 @@ figcaption {
   width: .5rem;
   height: .5rem;
 }
-/* SERVICE */
 
-.quote-content,
-.service-content,
-.road-content {
+.quote {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -375,26 +377,45 @@ figcaption {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   background-color: var(--content-color);
+  margin: auto;
 }
 
-.quote-content blockquote strong {
-  display: block;
-  text-align: end;
-  font-size: small;
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  max-width: var(--max-width);
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  background-color: var(--content-color);
+  gap: 2rem;
+  margin: auto;
+}
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+}
+
+blockquote footer {
+  align-self: flex-end;
 }
 
 .about-me-title,
 .service-title {
-  margin-bottom: 1.25rem;
   font-size: 1.5rem;
 }
 
-.service-content .my-offer {
+.service .my-offer {
   height: 15rem;
   border-radius: 50%;
-  margin-bottom: 2rem;
   object-fit: cover;
 }
+
 .quote-description {
   display: flex;
   align-items: center;
@@ -484,7 +505,7 @@ figcaption {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-block: 3rem;
+  margin-left: 2rem;
 }
 
 .service-detials li{
@@ -520,7 +541,7 @@ figcaption {
   font-size: 2.5rem;
 }
 
-.road-content .your-way {
+.your-way {
   border-radius: 50%;
   height: 20rem;
   margin-bottom: 2rem;
@@ -536,16 +557,25 @@ figcaption {
   z-index: 0;
 }
 
-.road-content {
+.road {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  max-width: var(--max-width);
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  background-color: var(--content-color);
+  position: relative;
   background-image: url("/assets/schillernder-original.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  margin: auto;
   color: white;
-}
-
-.road-content {
-  position: relative;
 }
 
 .road-lists {
@@ -558,7 +588,7 @@ figcaption {
   border-image: linear-gradoent();
 }
 
-.road-content::before {
+.road::before {
   content: '';
   position: absolute;
   top: 0;
@@ -594,7 +624,7 @@ figcaption {
 }
 
 /* CONTACT */
-.contact-content {
+.contact {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -606,6 +636,8 @@ figcaption {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   background-color: var(--content-color);
+  margin: auto;  
+  margin-bottom: 1rem;
 }
 
 .contact-title {
@@ -814,9 +846,9 @@ figcaption {
     height: 50%;
     width: 100%;
     display: none;
+    padding-top: 2rem;
     background-color: var(--body-bg);
     transition: all 175ms ease-in-out;
-    gap: 3.25rem;
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 1;
@@ -880,7 +912,7 @@ figcaption {
   }
   
   .welcome {
-    padding: 5rem 1rem 2rem 1rem
+    padding: 3rem 1rem 2rem 1rem
   }
 
   .welcome .content {
@@ -903,16 +935,21 @@ figcaption {
     padding: 5rem 2rem 2rem 2rem;
   }
 
-  .service-content .service-description p {
+  .service .service-description p {
     line-height: 1.5;
   }
 
-  .road-content .road-lists li {
+  .road-lists li {
     flex-direction: column;
-    gap: 0;
+    gap: 1rem;
   }
 
   .about-me-welcome {
     margin-top: -2rem
+  }
+
+  .strong-plus-container {
+    margin: 0;
+    margin-block: 1.5rem;
   }
 }
