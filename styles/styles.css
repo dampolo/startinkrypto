@@ -297,7 +297,7 @@ main {
     gap: 1rem;
 }
 
-.about-me-welcome {
+.about-me-content {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -357,27 +357,43 @@ figcaption {
 
 .service-description .paragraph::before,
 .about-me-description p::before {
-  content: "*";
+  content: "";
+  background-image: url("../assets/direct-hit.webp");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
   position: absolute;
-  left: -24px; /* Or however far you want it from the text */
-  top: 0.2em;
-  width: .5rem;
-  height: .5rem;
+  left: -2.2875rem; /* Or however far you want it from the text */
+  top: 0.2rem;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .quote {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: fit-content;
   max-width: var(--max-width);
   width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 2rem;
   background-color: var(--content-color);
+  gap: 1rem;
   margin: auto;
+}
+.quote img {
+  align-self: flex-start;
+}
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+}
+
+blockquote footer {
+  align-self: flex-end;
+  font-weight: 600;
 }
 
 .service {
@@ -396,15 +412,6 @@ figcaption {
   margin: auto;
 }
 
-blockquote {
-  display: flex;
-  flex-direction: column;
-}
-
-blockquote footer {
-  align-self: flex-end;
-}
-
 .about-me-title,
 .service-title {
   font-size: 1.5rem;
@@ -414,18 +421,6 @@ blockquote footer {
   height: 15rem;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.quote-description {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.quote-description img {
-  align-self: self-start;
-  width: 2rem;
-  height: 100%;
 }
 
 .service-description {
@@ -531,7 +526,6 @@ blockquote footer {
 /* ROAD */
 
 .road-title {
-  margin-bottom: 1.25rem;
   font-size: 1.5rem;
   text-align: center;
   z-index: 0;
@@ -544,16 +538,15 @@ blockquote footer {
 .your-way {
   border-radius: 50%;
   height: 20rem;
-  margin-bottom: 2rem;
   object-fit: cover;
   z-index: 0;
+  margin-bottom: 2rem;
 }
 
 .short-description {
   font-weight: 700;
   font-size: 1.3rem;
   text-align: center;
-  margin-bottom: 3rem;
   z-index: 0;
 }
 
@@ -574,6 +567,7 @@ blockquote footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  gap: 1rem;
   margin: auto;
   color: white;
 }
@@ -581,7 +575,6 @@ blockquote footer {
 .road-lists {
   display: flex;
   gap: 2rem;
-  margin-bottom: 1rem;
   flex-wrap: wrap;
   justify-content: center;
   z-index: 0;
@@ -645,7 +638,7 @@ blockquote footer {
   font-size: 1.5rem;
 }
 
-.contact-media ul {
+.contact ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -676,6 +669,11 @@ blockquote footer {
 
 .qr-code {
   width: 6rem;
+}
+
+.contact-appointment svg path{
+  color: #000000;
+  transition: var(--first-transition);
 }
 
 .contact-appointment {
@@ -715,7 +713,7 @@ blockquote footer {
   min-height: 25px;
 }
 
-.contact-appointment p span {
+.contact-appointment span {
   font-weight: bold;
 }
 
@@ -738,6 +736,7 @@ blockquote footer {
 
 .footer nav ul {
   display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -832,6 +831,20 @@ blockquote footer {
   text-align: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 @media (max-width: 950px) {
   .main-nav {
     padding-inline: 1rem;
@@ -895,8 +908,6 @@ blockquote footer {
 }
 
 @media (max-width: 500px) {
-
-
   .main-nav {
     height: 3rem;
     padding-inline: 0;
@@ -944,7 +955,7 @@ blockquote footer {
     gap: 1rem;
   }
 
-  .about-me-welcome {
+  .about-me-content {
     margin-top: -2rem
   }
 
