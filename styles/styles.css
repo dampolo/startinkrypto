@@ -74,7 +74,8 @@ main {
   padding-inline: 3.125rem;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
-  margin-inline: 1rem
+  margin-inline: 1rem;
+  background: #ffff;
 }
 
 .main-nav .logo {
@@ -213,6 +214,7 @@ main {
   margin: 0.5rem auto 0 auto;
   gap: 1rem;
 }
+
 
 .welcome .content {
   font-size: clamp(1.5rem, 4vw, 2rem);
@@ -410,17 +412,23 @@ blockquote footer {
   background-color: var(--content-color);
   gap: 2rem;
   margin: auto;
+  position: relative;
 }
 
-.about-me-title,
+.about-me-title {
+  font-size: 1.5rem;
+}
+
 .service-title {
   font-size: 1.5rem;
+  z-index: 0;
 }
 
 .service .my-offer {
   height: 15rem;
   border-radius: 50%;
   object-fit: cover;
+  z-index: 0;
 }
 
 .service-description {
@@ -633,16 +641,16 @@ blockquote footer {
   margin-bottom: 1rem;
 }
 
-.contact-title {
-  margin-bottom: 1.25rem;
-  font-size: 1.5rem;
-}
-
-.contact ul {
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+}
+
+.contact-title {
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .telephone,
@@ -652,13 +660,13 @@ blockquote footer {
   color: inherit;
 }
 
-.telephone a,
-.email a{
+.telephone,
+.email{
   color: inherit;
 }
 
-.telephone a:hover,
-.email a:hover{
+.telephone:hover,
+.email:hover{
   text-decoration: underline;
 }
 
