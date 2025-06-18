@@ -264,11 +264,15 @@ main {
 
 
 .start {
-  color: var(--primary);
+  background: linear-gradient(180deg, #d6a553, #8f5907);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .krypto {
-  color: var(--secondary);
+  background: linear-gradient(180deg, #d6a553, #8f5907);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .top-left,
