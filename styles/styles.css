@@ -488,15 +488,18 @@ blockquote footer {
   outline: var(--focus);
 }
 
-.legacy-content a .strong-arrow,
-.imprint-content a .strong-arrow,
+.legacy a,
+.imprint a {
+  align-self: baseline;
+}
+
+.legacy a .strong-arrow,
+.imprint a .strong-arrow,
 .appointment-content a .strong-arrow {
   transform: rotate(-180deg);
   width: 2rem;
 }
 
-.legacy-content a,
-.imprint-content a,
 .appointment-content a {
   align-self: normal;
 }
@@ -784,9 +787,7 @@ blockquote footer {
   margin-top: 0.5rem
 }
 
-.appointment-content,
-.imprint-content,
-.legacy-content {
+.appointment-content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -801,9 +802,42 @@ blockquote footer {
   position: relative;
 }
 
+.legacy,
+.imprint {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  max-width: var(--max-width);
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  padding: 7rem 2rem 2rem 2rem;
+  position: relative;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
 .imprint-title {
   margin-bottom: 1.25rem;
   font-size: 1.5rem;
+}
+
+.legacy-description p,
+.imprint-description p {
+  margin-bottom: 1rem;
+}
+
+.legacy-description h2,
+.imprint-description h2 {
+  font-size: 1.3rem;
+}
+
+.legacy-description h3,
+.imprint-description h3 {
+  font-size: 1.1rem;
 }
 
 .imprint-description p:nth-child(1),
@@ -815,7 +849,7 @@ blockquote footer {
   word-break: break-all;
 }
 
-.legacy-content .legacy-title {
+.legacy-description .legacy-title {
   margin-bottom: 1.25rem;
   font-size: 1.5rem;
 }
