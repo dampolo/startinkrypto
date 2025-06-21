@@ -729,6 +729,7 @@ blockquote footer {
 }
 
 .contact-appointment span {
+  display: contents;
   font-weight: bold;
 }
 
@@ -1008,5 +1009,9 @@ blockquote footer {
   .strong-plus-container {
     margin: 0;
     margin-block: 1.5rem;
+  }
+
+  .contact-appointment {
+    text-align: center;
   }
 }
