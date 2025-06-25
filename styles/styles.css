@@ -316,7 +316,7 @@ main {
     z-index: 0;
 }
 
-.financial-advice,
+
 .about-me {
   display: flex;
   flex-direction: column;
