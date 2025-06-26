@@ -520,20 +520,20 @@ blockquote footer {
   z-index: 0;
 }
 
-.service-detials {
+.service-details {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-left: 3rem;
 }
 
-.service-detials li{
+.service-details li{
   position: relative;
   font-size: 1.1rem;
   font-weight: 500;
 }
 
-.service-detials li::before {
+.service-details li::before {
   content: "";
   background-image: url("../assets/confirm.svg");
   background-size: 30px 30px;
