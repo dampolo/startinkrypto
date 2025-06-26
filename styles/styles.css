@@ -524,7 +524,7 @@ blockquote footer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 .service-detials li{
@@ -701,7 +701,7 @@ blockquote footer {
 }
 
 .contact-appointment {
-  background: linear-gradient(180deg, #d6a553, #8f5907);;
+  background: linear-gradient(180deg, #d6a553, #8f5907);
   color: #000000;
   border-radius: var(--border-radius);
   display: flex;
