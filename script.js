@@ -13,11 +13,13 @@ async function includeHTML() {
         element.innerHTML = html;
       } else {
         errorActive.classList.add("active");
-        errorType.innerHTML = /*html*/ `<div>ERROR ${resp.status}</div>`;
+        errorType.innerHTML = /*html*/ `<span>ERROR ${resp.status}</span>
+                                        <span class="error-title">Upppsss.... TRY AGAIN....</span>`;
       }
     } catch (error) {
       errorActive.classList.add("active");
-      errorType.innerHTML = /*html*/ `<div>ERROR ${error.message}</div>`;
+      errorType.innerHTML = /*html*/ `<span>ERROR ${error.message}</span>
+                                      <span class="error-title">Upppsss.... TRY AGAIN....</span>`;
     }
   }
   initEventListeners();
