@@ -709,7 +709,7 @@ blockquote footer {
   display: flex;
   border-radius: var(--border-radius);
   background: linear-gradient(180deg, #d6a553, #8f5907);
-  max-width: 25rem;
+  max-width: 8rem;
   width: 100%;
   scale: 1;
   transition: all ease-in-out 150ms;
@@ -717,6 +717,10 @@ blockquote footer {
   justify-content: space-between;
   font-weight: 700;
   align-self: end;
+}
+
+.content-link.cash {
+  max-width: 17rem;
 }
 
 .content-link:hover {
