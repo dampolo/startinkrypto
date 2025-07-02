@@ -367,7 +367,19 @@ figcaption {
 
 }
 
-.service-description .paragraph::before,
+.service-description .paragraph::before {
+  content: "";
+  background-image: url("../assets/question-mark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -2.2875rem; /* Or however far you want it from the text */
+  top: 0.3rem;
+  width: 4.5rem;
+  height: 1.5rem;
+}
+
+
 .about-me-description p::before {
   content: "";
   background-image: url("../assets/direct-hit.webp");
