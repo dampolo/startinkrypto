@@ -216,7 +216,7 @@ main {
   overflow: hidden;
 }
 
-.welcome .content {
+.welcome .welcome-content {
   font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
   padding-inline: 2rem;
@@ -233,14 +233,14 @@ main {
   position: relative;
 }
 
-.content h1 {
+.welcome-content h1 {
   grid-area: welcome2;
   text-align: center;
   font-size: clamp(1.6rem, 4vw, 2.5rem);
   z-index: 0;
 }
 
-.content p {
+.welcome-content p {
   grid-area: description2;
   max-width: 31.25rem;
   margin: auto;
@@ -263,8 +263,6 @@ main {
 .bottom-right {
   grid-area: bitcoin3;
 }
-
-
 
 .start {
   background: linear-gradient(180deg, #d6a553, #8f5907);
@@ -707,7 +705,13 @@ blockquote footer {
   flex-direction: column;
   gap: 1rem;
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.partner-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .partner-list li::after {
@@ -717,7 +721,7 @@ blockquote footer {
   width: 70%;
   background: linear-gradient(180deg, #d6a553, #8f5907);
   margin-inline: auto;
-  bottom: -2.6rem;
+  bottom: -0.5rem;
   left: 0;
   right: 0;
 }
@@ -738,9 +742,41 @@ blockquote footer {
   margin-bottom: 0;
 }
 
+.partner-list-button {
+  position:relative;
+  text-align: start;
+  background: none;
+  background: linear-gradient(180deg, #d6a65357, #8f59073f);
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  scale: 1;
+  transition: all 125ms ease-in;
+}
 
-.partner-list h3 {
-  font-size: 1.3rem;
+.partner-list-button:after {
+  content: url("../assets/plus.svg"); /* Unicode character for "plus" sign (+) */
+  position: absolute;
+  right: 1rem;
+}
+
+.open:after {
+  content: url("../assets/minus.svg"); /* Unicode character for "minus" sign (-) */
+}
+
+.partner-list-button:hover {
+  scale: 1.02;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.open {
+  height: fit-content;
 }
 
 .content-link {
@@ -756,6 +792,7 @@ blockquote footer {
   justify-content: space-between;
   font-weight: 700;
   align-self: end;
+  margin-bottom: 1rem;
 }
 
 .content-link.cash {
@@ -1111,11 +1148,11 @@ blockquote footer {
     padding: 3rem 2rem 2rem /*top block bottom */
   }
 
-  .welcome .content {
+  .welcome .welcome-content {
     padding-inline: 0;
   }
 
-  .welcome .content p {
+  .welcome .welcome-content p {
     padding-inline: 0;
   }
 

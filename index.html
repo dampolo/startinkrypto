@@ -39,7 +39,7 @@
     <header class="header" w3-include-html="templates/header.html"></header>
     <main>
         <section class="welcome">
-            <div class="content">
+            <div class="welcome-content">
                 
                 <h1>WILLKOMMEN <br>
                     bei <br>
@@ -206,36 +206,52 @@
 
             <ul class="partner-list">
                 <li>
-                    <h3>Tangem Wallet</h3>
-                    <img width="70" height="20" loading="lazy" src="./assets/tangem.svg" alt="Tangem">    
-                    <p>
-                        Tangem revolutioniert das Krypto-Wallet-Erlebnis mit maximaler Sicherheit, intuitiver Handhabung und höchstem Komfort. Verwalte deine digitalen Vermögenswerte jederzeit und überall, völlig unabhängig. Ob Einsteiger oder Profi: Tangem macht Selbstverwahrung einfacher, zugänglicher und effizienter.
-                    </p>
-
-                    <a target="_blank" href="https://tangem.com/pricing/?promocode=VE5GS8" class="content-link">
-                        <img width="58" height="17" loading="lazy" src="./assets/tangem.svg" alt="Tangem" class="logo">
-                        <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
-                    </a>
-                </li>
-
-                <li>
-                    <h2>Kraken</h2>
-                    <img width="70" height="10" loading="lazy" src="./assets/kraken.svg" alt="Kraken">    
-                    <p>
-                        Kraken ist eine der ältesten und sichersten Krypto-Börsen der Welt, gegründet 2011 in den USA. Über die Plattform können Nutzer Kryptowährungen kaufen, verkaufen, handeln und staken.
-                        Kraken ist ideal für Nutzer, die sicher und professionell mit Kryptowährungen handeln möchten – sowohl Einsteiger als auch erfahrene Trader.
-                    </p>
+                    <button class="partner-list-button collapsible">
+                        Tangem Wallet
+                    </button>
                     
-                    <a target="_blank" href="https://invite.kraken.com/JDNW/sdkfgi6w" class="content-link">
-                        <img width="58" height="10" src="./assets/kraken.svg" alt="Kraken" class="logo">
-                        <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
-                    </a>
+                    <div class="partner-list-content content">
+                        <img width="70" height="20" loading="lazy" src="./assets/tangem.svg" alt="Tangem">
+                    
+                        <p>
+                            Tangem revolutioniert das Krypto-Wallet-Erlebnis mit maximaler Sicherheit, intuitiver Handhabung und höchstem Komfort. Verwalte deine digitalen Vermögenswerte jederzeit und überall, völlig unabhängig. Ob Einsteiger oder Profi: Tangem macht Selbstverwahrung einfacher, zugänglicher und effizienter.
+                        </p>
+
+                            <a target="_blank" href="https://tangem.com/pricing/?promocode=VE5GS8" class="content-link">
+                                <img width="58" height="17" loading="lazy" src="./assets/tangem.svg" alt="Tangem" class="logo">
+                                <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
+                            </a>
+                    </div>
                 </li>
 
                 <li>
-                    <h2>MEXC</h2>
-                    <img width="50" height="50" loading="lazy" src="./assets/mexc-logo.svg" alt="Mexc">    
-                    <p>
+                    <button class="partner-list-button collapsible">
+                        Kraken
+                    </button>
+                    <div class="partner-list-content content">
+                        <img width="70" height="10" loading="lazy" src="./assets/kraken.svg" alt="Kraken">    
+                        <p class="partner-list-text">
+                            Kraken ist eine der ältesten und sichersten Krypto-Börsen der Welt, gegründet 2011 in den USA. Über die Plattform können Nutzer Kryptowährungen kaufen, verkaufen, handeln und staken.
+                            Kraken ist ideal für Nutzer, die sicher und professionell mit Kryptowährungen handeln möchten – sowohl Einsteiger als auch erfahrene Trader.
+                        </p>
+                        
+                        <a target="_blank" href="https://invite.kraken.com/JDNW/sdkfgi6w" class="content-link">
+                            <img width="58" height="10" src="./assets/kraken.svg" alt="Kraken" class="logo">
+                            <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
+                        </a>
+                    </div>
+
+                </li>
+
+                <li>
+
+                    <button class="partner-list-button collapsible">
+                        MEXC
+                    </button>
+                    <div class="partner-list-content content">
+
+                        <img width="50" height="50" loading="lazy" src="./assets/mexc-logo.svg" alt="Mexc">    
+                        <p>
                         MEXC ist eine globale Krypto-Börse mit einer sehr großen Auswahl an handelbaren Coins, günstigen Gebühren und Funktionen wie Spot-, Futures-, Copy- und Demo-Trading. Sie richtet sich vor allem an aktive Trader, hat aber regulatorische Unsicherheiten und keinen direkten Fiat-Auszahlungsservice.
                     </p>
                     
@@ -243,12 +259,16 @@
                         <img width="58" height="9" src="./assets/mexc.svg" alt="Mexc" class="logo">
                         <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
                     </a>
+                    </div>
                 </li>
 
                 <li>
-                    <h2>CoinTracking - Steuertool</h2>
-                    <img width="58" height="12" loading="lazy" src="./assets/coin-tracking-black.png" alt="Coin Tracking">    
-                    <p>
+                    <button class="partner-list-button collapsible">
+                        CoinTracking - Steuertool
+                    </button>
+                    <div class="partner-list-content content">
+                        <img width="58" height="12" loading="lazy" src="./assets/coin-tracking-black.png" alt="Coin Tracking">    
+                        <p>
                         CoinTracking ist eine Software zur automatischen Erfassung und Analyse von Krypto-Transaktionen. 
                         Sie zeigt dir den aktuellen Stand deines Portfolios, berechnet Gewinne und Verluste und unterstützt bei der Steuererklärung. 
                         Durch den Import von Daten aus Börsen und Wallets behältst du jederzeit den Überblick über deine Krypto-Aktivitäten.
@@ -258,43 +278,54 @@
                         <img width="58" height="12" loading="lazy" src="./assets/coin-tracking.png" alt="Coin Tracking" class="logo">
                         <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
                     </a>
+                    </div>
                 </li>
 
                 <li>
-                    <h2>BTC - Sparplan</h2>
-                    <img width="58" height="12" loading="lazy" src="./assets/21bitcoin.svg" alt="21 bitcoin">    
-                    <p>
+                    <button class="partner-list-button collapsible">
+                        BTC - Sparplan
+                    </button>
+
+                    <div class="partner-list-content content">
+                        <img width="58" height="12" loading="lazy" src="./assets/21bitcoin.svg" alt="21 bitcoin">    
+                        <p>
                         21bitcoin ist eine regulierte App, mit der du Bitcoin schnell und einfach kaufen, verkaufen und verwalten kannst - dabei profitierst du von kostenfreien und sofortigen SEPA-Instant-Einzahlungen bis zu €100.000 sowie flexiblen Funktionen wie Sparplänen, Limit Orders und automatischen Wallet-Transfers ins eigene Wallet.
-                    </p>
+                        </p>
                     
-                    <a target="_blank" href="https://21bitcoin.app.link/invite/?code=7J9ER" class="content-link">
-                        <img width="58" height="12" loading="lazy" src="./assets/21bitcoin.svg" alt="21 Bitcoin" class="logo">
-                        <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
-                    </a>
+                        <a target="_blank" href="https://21bitcoin.app.link/invite/?code=7J9ER" class="content-link">
+                            <img width="58" height="12" loading="lazy" src="./assets/21bitcoin.svg" alt="21 Bitcoin" class="logo">
+                            <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
+                        </a>
+                    </div>
                 </li>
 
                 <li>
-                    <h2>CASH Club Academy</h2>
-                    <img width="58" height="32" loading="lazy" src="./assets/cash-club-academy.jpg" alt="CashClub Academy">    
-                    <p>
-                        Wenn du tiefer eintauchen willst, können wir dir die CASH Club Akademy wärmstens empfehlen, perfekt für alle, die einen echten Deep Dive in die Krypto-Welt suchen.
-                    </p>
+                    <button class="partner-list-button collapsible">
+                        CASH Club Academy
+                    </button>
 
-                    <a target="_blank" href="https://copecart.com/products/bb34db8a/p/ela7ela" class="content-link cash">
-                        <img width="58" height="32" loading="lazy" src="./assets/cash-club-academy.jpg" alt="CashClub Academy" class="logo">
-                        <span>
-                            Jahres-Mitgl.
-                        </span>
-                        <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
-                    </a>
-                    
-                    <a target="_blank" href="https://copecart.com/products/34296403/p/ela7ela " class="content-link cash">
-                        <img width="58" height="32" loading="lazy" src="./assets/cash-club-academy.jpg" alt="CashClub Academy" class="logo">
-                        <span>
-                            Monats-Mitgl.
-                        </span>
-                        <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
-                    </a>
+                    <div class="partner-list-content content">
+                        <img width="58" height="32" loading="lazy" src="./assets/cash-club-academy.jpg" alt="CashClub Academy">    
+                        <p>
+                        Wenn du tiefer eintauchen willst, können wir dir die CASH Club Akademy wärmstens empfehlen, perfekt für alle, die einen echten Deep Dive in die Krypto-Welt suchen.
+                        </p>
+
+                        <a target="_blank" href="https://copecart.com/products/bb34db8a/p/ela7ela" class="content-link cash">
+                            <img width="58" height="32" loading="lazy" src="./assets/cash-club-academy.jpg" alt="CashClub Academy" class="logo">
+                            <span>
+                                Jahres-Mitgl.
+                            </span>
+                            <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
+                        </a>
+                        
+                        <a target="_blank" href="https://copecart.com/products/34296403/p/ela7ela " class="content-link cash">
+                            <img width="58" height="32" loading="lazy" src="./assets/cash-club-academy.jpg" alt="CashClub Academy" class="logo">
+                            <span>
+                                Monats-Mitgl.
+                            </span>
+                            <img width="24" height="24" loading="lazy" src="./assets/arrow-right.svg" alt="arrow right">
+                        </a>
+                    </div>
                 </li>
 
             </ul>
