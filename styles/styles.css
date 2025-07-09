@@ -442,6 +442,10 @@ blockquote footer {
   font-weight: 600;
 }
 
+blockquote footer a:hover {
+  text-decoration: underline;
+}
+
 .service {
   display: flex;
   flex-direction: column;
