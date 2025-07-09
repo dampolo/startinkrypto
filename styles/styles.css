@@ -742,7 +742,7 @@ blockquote footer {
   right: 0;
 }
 
-.partner-list li:last-child {
+.partner-list details:last-child {
   margin-bottom: 0;
 }
 
@@ -757,11 +757,6 @@ summary {
   font-weight: 500;
   scale: 1;
   cursor: pointer;
-}
-
-details {
-  position: relative;
-  padding: 10px;
 }
 
 summary::marker {
@@ -783,19 +778,19 @@ summary:hover {
 }
 
 details {
+  position: relative;
+  padding: 10px;
   interpolate-size: allow-keywords;
-  
-  &::details-content {
-    transition:
-      block-size 1s,
-      content-visibility 1s allow-discrete;
+}
+
+details::details-content {
+    transition: block-size 1s, content-visibility 1s allow-discrete;
     overflow: hidden;
-    block-size: 0;     /* Or also:  height:0; */
+    block-size: 0;
   }
-  
-  &[open]::details-content {
-    block-size: auto;  /* Or also:  height:auto; */
-  }
+
+details[open]::details-content {
+    block-size: auto;
 }
 
 .content-link {
