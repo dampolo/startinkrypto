@@ -761,6 +761,7 @@ summary {
   font-weight: 500;
   scale: 1;
   cursor: pointer;
+  transition: var(--first-transition);
 }
 
 summary::marker {
