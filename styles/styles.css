@@ -402,6 +402,18 @@ figcaption {
   height: 3rem;
 }
 
+.service-description .paragraph:nth-of-type(4)::after {
+  content: "";
+  background-image: url("../assets/time.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -2.5rem; /* Or however far you want it from the text */
+  top: -0.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
 .about-me-description p::before {
   content: "";
   background-image: url("../assets/direct-hit.webp");
@@ -494,7 +506,7 @@ blockquote footer a:hover {
   padding-left: 1.5rem;
 }
 
-.service-description .paragraph:nth-of-type(3) {
+.service-description .paragraph:nth-of-type(4) {
   margin-bottom: 0;
 }
 
