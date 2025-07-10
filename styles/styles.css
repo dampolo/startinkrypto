@@ -15,8 +15,8 @@
   --box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
   --letter-color: #000;
   --first-transition: all 200ms ease-in-out;
-  --content-color: #FAFAFA;
-  --footer:#e1e1e1;
+  --content-color: #fafafa;
+  --footer: #e1e1e1;
   --focus: 2px dotted var(--primary);
 }
 
@@ -79,7 +79,7 @@ main {
 }
 
 .main-nav .logo {
-  display: flex;  
+  display: flex;
   align-items: center;
   z-index: 2;
   font-weight: 600;
@@ -125,16 +125,16 @@ main {
   line-height: 1.725rem;
   color: inherit;
   transition: all 125ms ease-in;
-  border: .125rem dotted transparent;
+  border: 0.125rem dotted transparent;
 }
 
 .main-nav ul li a:focus {
-  border: .125rem dotted var(--primary);
+  border: 0.125rem dotted var(--primary);
   outline: var(--primary);
 }
 
 .main-nav ul li a:active {
-  border: .125rem dotted transparent;
+  border: 0.125rem dotted transparent;
 }
 
 .main-nav ul li a::before {
@@ -206,7 +206,7 @@ main {
   max-width: var(--max-width);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  padding: 7rem 2rem 2rem 2rem ;
+  padding: 7rem 2rem 2rem 2rem;
   margin-inline: 1rem;
   position: relative;
   background-color: var(--content-color);
@@ -224,12 +224,11 @@ main {
   display: grid;
   grid-template-rows: 5.25rem 1fr 1fr 5.25rem;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-areas: 
-    'kaspa1 kaspa2 kaspa3'
-    'welcome1 welcome2 welcome3'
-    'description1 description2 description3'
-    'bitcoin1 bitcoin2 bitcoin3'
-  ;
+  grid-template-areas:
+    "kaspa1 kaspa2 kaspa3"
+    "welcome1 welcome2 welcome3"
+    "description1 description2 description3"
+    "bitcoin1 bitcoin2 bitcoin3";
   position: relative;
 }
 
@@ -299,21 +298,20 @@ main {
 
 /* ABOUT ME */
 .about-me {
-    display: flex;
-    text-align: center;
-    gap: 1rem;
+  display: flex;
+  text-align: center;
+  gap: 1rem;
 }
 
 .about-me-content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    margin-top: -6rem;
-    z-index: 0;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  margin-top: -6rem;
+  z-index: 0;
+  margin-bottom: 1rem;
 }
-
 
 .about-me {
   display: flex;
@@ -331,8 +329,8 @@ main {
 }
 
 .about-me-img {
-  border: .25rem solid var(--primary); /* Inner border */
-  box-shadow: 0 0 0 .25rem var(--secondary); /* Outer border */
+  border: 0.25rem solid var(--primary); /* Inner border */
+  box-shadow: 0 0 0 0.25rem var(--secondary); /* Outer border */
   border-radius: 50%;
   width: 10.5rem;
 }
@@ -363,7 +361,6 @@ figcaption {
   text-align: start;
   hyphens: auto;
   position: relative;
-
 }
 
 .service-description .paragraph:nth-of-type(1)::after {
@@ -526,7 +523,6 @@ blockquote footer a:hover {
   z-index: 0;
 }
 
-
 .strong-plus-container:hover span {
   filter: drop-shadow(2px 4px 6px var(--primary));
 }
@@ -565,7 +561,7 @@ blockquote footer a:hover {
 }
 
 .strong-help {
-  border: solid .1375rem;
+  border: solid 0.1375rem;
   border-radius: 1rem;
   padding: 0.5rem 1.5rem;
   box-shadow: var(--box-shadow) inset;
@@ -579,7 +575,7 @@ blockquote footer a:hover {
   margin-left: 3rem;
 }
 
-.service-details li{
+.service-details li {
   position: relative;
   font-size: 1.1rem;
   font-weight: 500;
@@ -595,7 +591,7 @@ blockquote footer a:hover {
   top: 0rem;
   margin-bottom: 1rem;
   display: inline-block;
-  width: 40px; 
+  width: 40px;
   height: 40px;
 }
 
@@ -658,7 +654,7 @@ blockquote footer a:hover {
 }
 
 .road::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -706,7 +702,7 @@ blockquote footer a:hover {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   background-color: var(--content-color);
-  margin: auto;  
+  margin: auto;
   margin-bottom: 1rem;
   gap: 1rem;
 }
@@ -763,7 +759,7 @@ blockquote footer a:hover {
 }
 
 summary {
-  position:relative;
+  position: relative;
   text-align: start;
   background: none;
   background: linear-gradient(180deg, #d6a65357, #8f59073f);
@@ -774,6 +770,10 @@ summary {
   scale: 1;
   cursor: pointer;
   transition: var(--first-transition);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 3rem;
 }
 
 summary::marker {
@@ -801,13 +801,13 @@ details {
 }
 
 details::details-content {
-    transition: block-size 1s, content-visibility 1s allow-discrete;
-    overflow: hidden;
-    block-size: 0;
-  }
+  transition: block-size 1s, content-visibility 1s allow-discrete;
+  overflow: hidden;
+  block-size: 0;
+}
 
 details[open]::details-content {
-    block-size: auto;
+  block-size: auto;
 }
 
 .content-link {
@@ -834,6 +834,40 @@ details[open]::details-content {
   scale: 1.02;
 }
 
+/* INSTAGRAM */
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  max-width: var(--max-width);
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  background-color: var(--content-color);
+  margin: auto;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.instagram-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.instagram a {
+  color: #2a6496;
+}
+.instagram a span {
+  color: #000000;
+}
+
+.instagram a:hover {
+  text-decoration: underline;
+}
 
 /* CONTACT */
 .contact {
@@ -848,7 +882,7 @@ details[open]::details-content {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   background-color: var(--content-color);
-  margin: auto;  
+  margin: auto;
   margin-bottom: 1rem;
 }
 
@@ -872,25 +906,25 @@ details[open]::details-content {
 }
 
 .telephone,
-.email{
+.email {
   color: inherit;
 }
 
 .telephone:hover,
-.email:hover{
+.email:hover {
   text-decoration: underline;
 }
 
 .telephone a:focus,
-.email a:focus{
-    outline: var(--focus);
+.email a:focus {
+  outline: var(--focus);
 }
 
 .qr-code {
   width: 6rem;
 }
 
-.contact-appointment svg path{
+.contact-appointment svg path {
   color: #000000;
   transition: var(--first-transition);
 }
@@ -910,7 +944,6 @@ details[open]::details-content {
 
 .contact-appointment:focus {
   outline: var(--focus);
-
 }
 
 .contact-content .contact-appointment {
@@ -934,8 +967,6 @@ details[open]::details-content {
   display: contents;
   font-weight: bold;
 }
-
-
 
 /* FOOTER */
 .footer {
@@ -989,7 +1020,7 @@ details[open]::details-content {
 .legacy,
 .imprint {
   flex: 1;
-  margin-top: 0.5rem
+  margin-top: 0.5rem;
 }
 
 .appointment-content {
@@ -1006,8 +1037,6 @@ details[open]::details-content {
   padding: 7rem 2rem 2rem 2rem;
   position: relative;
 }
-
-
 
 .legacy,
 .imprint {
@@ -1091,7 +1120,7 @@ details[open]::details-content {
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -1124,7 +1153,6 @@ details[open]::details-content {
   .main-nav button {
     display: flex;
     border: 2px dotted transparent;
-
   }
 
   .main-nav button:focus-visible {
@@ -1140,7 +1168,7 @@ details[open]::details-content {
     z-index: 4;
     position: fixed;
     right: 32px;
-    top: 19px
+    top: 19px;
   }
 
   .remove-menu {
@@ -1172,11 +1200,11 @@ details[open]::details-content {
 
   .main-nav .pos-fix-hamburger {
     right: 16px;
-    top: 3px
+    top: 3px;
   }
-  
+
   .welcome {
-    padding: 3rem 2rem 2rem /*top block bottom */
+    padding: 3rem 2rem 2rem; /*top block bottom */
   }
 
   .welcome .welcome-content {
@@ -1209,7 +1237,7 @@ details[open]::details-content {
   }
 
   .about-me-content {
-    margin-top: -2rem
+    margin-top: -2rem;
   }
 
   .strong-plus-container {
