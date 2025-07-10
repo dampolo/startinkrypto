@@ -773,7 +773,7 @@ summary {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  padding-right: 3rem;
+  padding-right: 2rem;
 }
 
 summary::marker {
