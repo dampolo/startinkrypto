@@ -1030,6 +1030,7 @@ details[open]::details-content {
   width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  background-color: var(--content-color);
   padding: 2rem;
   padding: 7rem 2rem 2rem 2rem;
   position: relative;
