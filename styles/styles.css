@@ -36,8 +36,13 @@ main {
   background-color: var(--body-bg);
   min-height: calc(100vh - 177px);
   color: var(--letter-color);
-  margin-inline: 1rem;
+  padding-inline: 1rem;
   gap: 1rem;
+  background-image: 
+  url("../assets/SK-favicon-colorless.svg");
+background-position:35px 35px;
+background-size: 70px 70px;
+background-repeat: repeat;
 }
 
 .header,
@@ -270,6 +275,7 @@ main {
   width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  background-color: var(--content-color);
   padding: 2rem;
   gap: 2rem;
   margin: auto;
@@ -293,11 +299,6 @@ main {
 }
 
 /* ABOUT ME */
-.about-me {
-  display: flex;
-  text-align: center;
-  gap: 1rem;
-}
 
 .about-me {
   display: flex;
@@ -309,6 +310,7 @@ main {
   width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  background-color: var(--content-color);
   padding: 2rem;
   gap: 2rem;
   margin: auto;
