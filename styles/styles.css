@@ -260,7 +260,12 @@ main {
 
 /* WHY WE */
 
-.why-we {
+.why-start-in-krypto-content {
+  display: flex;
+  
+}
+
+.why-start-in-krypto {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -275,21 +280,27 @@ main {
   margin: auto;
 }
 
-.about-me-img,
-.why-we-img {
+.about-me-img {
   border: 0.25rem solid var(--primary); /* Inner border */
   box-shadow: 0 0 0 0.25rem var(--secondary); /* Outer border */
   border-radius: 50%;
   width: 10.5rem;
 }
 
-.why-we-content {
+
+.why-start-in-krypto-img {
+  width: auto;
+  height: 295px;
+}
+
+.why-start-in-krypto-figure {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   gap: 1rem;
   z-index: 0;
-  margin-bottom: 1rem;
+  flex: 1;
 }
 
 /* ABOUT ME */
@@ -334,6 +345,7 @@ figcaption {
 .about-me-description {
   text-align: center;
   z-index: 0;
+  flex: 3;
 }
 
 .about-me-description p {
@@ -342,50 +354,7 @@ figcaption {
   position: relative;
 }
 
-.service-description .paragraph:nth-of-type(1)::after {
-  content: "";
-  background-image: url("../assets/currency-exchange.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: -2.5rem; /* Or however far you want it from the text */
-  top: -0.5rem;
-  width: 3rem;
-  height: 3rem;
-}
-
-.service-description .paragraph:nth-of-type(2)::after {
-  content: "";
-  background-image: url("../assets/bitcoin-up.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: -2.5rem; /* Or however far you want it from the text */
-  top: -0.5rem;
-  width: 3rem;
-  height: 3rem;
-}
-
-.service-description .paragraph:nth-of-type(3)::after {
-  content: "";
-  background-image: url("../assets/money-bag.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: -2.5rem; /* Or however far you want it from the text */
-  top: -0.5rem;
-  width: 3rem;
-  height: 3rem;
-}
-
-.service-description .paragraph:nth-of-type(4)::after {
-  content: "";
-  background-image: url("../assets/time.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: -2.5rem; /* Or however far you want it from the text */
-  top: -0.5rem;
+.service-description img{
   width: 3rem;
   height: 3rem;
 }
@@ -469,17 +438,22 @@ blockquote footer a:hover {
 
 .service-description {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 1.25rem;
-  margin-inline: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex: 3;
 }
 
-.service-description .paragraph {
-  position: relative;
+.service-description li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   line-height: 1.5;
-  margin-bottom: 3rem;
-  padding-left: 1.5rem;
+  padding: 1rem;
+  flex-basis: 40%;
+  max-width: 40%;
+  gap: 1rem;
 }
 
 .service-description .paragraph:nth-of-type(4) {
@@ -1154,11 +1128,36 @@ details[open]::details-content {
     display: none;
   }
 
+  .why-start-in-krypto-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .service-description {
+    justify-content: start;
+  }
+
+  .service-description li {
+    flex-direction: row;
+    flex-basis: auto;
+    max-width: none;
+  }
+
   .main-nav .pos-fix-hamburger:focus-visible {
     border: 2px dotted var(--primary);
     outline: var(--primary);
   }
+  .why-start-in-krypto-img {
+    border: 0.25rem solid var(--primary); /* Inner border */
+    box-shadow: 0 0 0 0.25rem var(--secondary); /* Outer border */
+    border-radius: 50%;
+    width: 168px;
+    height: 168px;
+  }
+  
 }
+
 
 @media (max-height: 400px) {
   .main-nav ul {
