@@ -39,10 +39,10 @@ main {
   padding-inline: 1rem;
   gap: 1rem;
   background-image: 
-  url("../assets/SK-favicon-colorless.svg");
+  url("../assets/SK-favicon-colorless.png");
 background-position:35px 35px;
 background-size: 70px 70px;
-background-repeat: repeat;
+background-repeat: calc(100% - 200px);
 }
 
 .header,
