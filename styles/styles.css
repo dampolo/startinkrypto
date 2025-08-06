@@ -38,11 +38,6 @@ main {
   color: var(--letter-color);
   padding-inline: 1rem;
   gap: 1rem;
-  background-image: 
-  url("../assets/SK-favicon-colorless.png");
-background-position:35px 35px;
-background-size: 70px 70px;
-background-repeat: calc(100% - 200px);
 }
 
 .header,
@@ -279,6 +274,9 @@ background-repeat: calc(100% - 200px);
   padding: 2rem;
   gap: 2rem;
   margin: auto;
+  background-image: url("../assets/SK-favicon-colorless.svg");
+  background-position: 35px 35px;
+  background-size: 70px 70px;
 }
 
 .about-me-img,
@@ -757,8 +755,8 @@ summary {
   padding-right: 2rem;
 }
 
-summary::marker {
-  content: "";
+summary::-webkit-details-marker {
+    display: none
 }
 
 summary::after {
