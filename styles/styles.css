@@ -755,9 +755,6 @@ summary {
   padding-right: 2rem;
 }
 
-summary::-webkit-details-marker {
-    display: none
-}
 
 summary::after {
   content: url("../assets/plus.svg");
@@ -767,6 +764,15 @@ summary::after {
 
 details[open] summary::after {
   content: url("../assets/minus.svg");
+}
+
+summary::marker {
+  content: "";
+}
+
+/* For Safari */
+details::-webkit-details-marker {
+    display: none
 }
 
 summary:hover {
