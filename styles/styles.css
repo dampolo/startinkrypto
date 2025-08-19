@@ -682,7 +682,6 @@ blockquote footer a:hover {
   padding: 2rem;
   background-color: var(--content-color);
   margin: auto;
-  margin-bottom: 1rem;
   gap: 1rem;
 }
 
@@ -755,7 +754,6 @@ summary {
   padding-right: 2rem;
 }
 
-
 summary::after {
   content: url("../assets/plus.svg");
   position: absolute;
@@ -772,7 +770,7 @@ summary::marker {
 
 /* For Safari */
 details::-webkit-details-marker {
-    display: none
+  display: none;
 }
 
 summary:hover {
@@ -817,6 +815,36 @@ details[open]::details-content {
 
 .content-link:hover {
   scale: 1.02;
+}
+
+/* REVIEW */
+.review {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: fit-content;
+  margin: auto;
+  margin-bottom: 1rem;
+  max-width: var(--max-width);
+  gap: 1rem;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  background-color: var(--content-color);
+  gap: 1rem;
+  flex: 1 0 25rem;
+}
+
+.review-star {
+  display: flex;
 }
 
 /* INSTAGRAM */
