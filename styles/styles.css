@@ -840,7 +840,7 @@ details[open]::details-content {
   padding: 2rem;
   background-color: var(--content-color);
   gap: 1rem;
-  flex: 1 0 25rem;
+  flex: 1 0 20rem;
 }
 
 .review-star {
