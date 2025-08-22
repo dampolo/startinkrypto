@@ -32,6 +32,8 @@
     <meta name="twitter:image" content="./assets/SK-metatag.png">
 
     <link rel="shortcut icon" href="./assets/SK-favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/resets.css">
+
     <link rel="stylesheet" href="./styles/styles.css">
     </head>
 <body onload="init()">
@@ -173,10 +175,8 @@
                     </li>
                 </ul>
                 <span>Keine Finanzberatung</span>
-                <a class="contact-appointment" href="appointment.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M8 14v4"/><path d="M12 14v4"/><path d="M16 14v4"/></svg>
-                        Jetzt <span>kostenlosen Termin</span> vereinbaren.
-                </a>            
+                <appointment-button></appointment-button>
+           
         </section>
 
         <!-- ABOUT ME -->
@@ -206,10 +206,8 @@
                         Ich nehme mir gerne für dich Zeit und wir finden in einem gemeinsamen Gespräch heraus, ob ich dir auf deinem Weg behilflich sein kann
                     </p>
                 </div>
-                <a class="contact-appointment" href="appointment.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M8 14v4"/><path d="M12 14v4"/><path d="M16 14v4"/></svg>
-                        Jetzt <span>kostenlosen Termin</span> vereinbaren.
-                </a> 
+                <appointment-button></appointment-button>
+ 
         </section>
 
         <!-- OUR PARTNER -->
@@ -378,7 +376,6 @@
             <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/84178d7bb504582cbd5c5d5579cd8ad8.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> 
 
         </section>
-        
         <section class="contact" id="kontakt">
                 <h2 class="contact-title">
                     Kontakt
@@ -408,10 +405,8 @@
                     
                         <!-- <img class="qr-code" src="./assets/qr-code-transparent.svg" alt="QR-code"> -->
 
-                <a class="contact-appointment" href="appointment.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-month"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M8 14v4"/><path d="M12 14v4"/><path d="M16 14v4"/></svg>
-                        Jetzt <span>kostenlosen Termin</span> vereinbaren.
-                </a>
+                    <appointment-button></appointment-button>
+
         </section>
 
     </main>
@@ -425,5 +420,6 @@
         <div class="error-type"></div>
     </div>
     <script src="./script.js"></script>
+    <script type="module" src="./appointment-button.js"></script>
 </body>
 </html>

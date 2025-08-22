@@ -1,6 +1,4 @@
-@import "./resets.css";
 @import "./animations.css";
-
 @import "../node_modules/hamburgers/dist/hamburgers.css";
 
 :root {
