@@ -682,7 +682,6 @@ blockquote footer a:hover {
   padding: 2rem;
   background-color: var(--content-color);
   margin: auto;
-  margin-bottom: 1rem;
   gap: 1rem;
 }
 
@@ -863,7 +862,6 @@ details[open]::details-content {
   padding: 2rem;
   background-color: var(--content-color);
   margin: auto;
-  margin-bottom: 1rem;
   gap: 1rem;
 }
 
