@@ -824,7 +824,6 @@ details[open]::details-content {
   flex-wrap: wrap;
   height: fit-content;
   margin: auto;
-  margin-bottom: 1rem;
   max-width: var(--max-width);
   gap: 1rem;
 }
@@ -861,7 +860,6 @@ details[open]::details-content {
   padding: 2rem;
   background-color: var(--content-color);
   margin: auto;
-  margin-bottom: 1rem;
   gap: 1rem;
 }
 
