@@ -43,6 +43,7 @@ class AppointmentButton extends HTMLElement {
             width: fit-content;
             gap: 0.5rem;
             text-decoration: none;
+            text-align: center;
             }
 
             .contact-appointment:focus-visible {
