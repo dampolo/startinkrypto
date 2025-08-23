@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "lit";
+import { LitElement, css, html } from "https://cdn.jsdelivr.net/gh/lit/dist@3/all/lit-all.min.js";
 
 class AppointmentButton extends LitElement {
   // Define scoped styles right with your component, in plain CSS
