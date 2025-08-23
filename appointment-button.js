@@ -23,7 +23,7 @@ class AppointmentButton extends LitElement {
       text-decoration: none
     }
 
-    .contact-appointment:focus {
+    .contact-appointment:focus-visible {
       outline: var(--focus);
     }
 

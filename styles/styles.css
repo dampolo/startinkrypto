@@ -1,3 +1,4 @@
+@import "./resets.css";
 @import "./animations.css";
 @import "../node_modules/hamburgers/dist/hamburgers.css";
 
@@ -933,50 +934,6 @@ details[open]::details-content {
 
 .qr-code {
   width: 6rem;
-}
-
-.contact-appointment svg path {
-  color: #000000;
-  transition: var(--first-transition);
-}
-
-.contact-appointment {
-  background: linear-gradient(180deg, #d6a553, #8f5907);
-  color: #000000;
-  border-radius: var(--border-radius);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  transition: var(--first-transition);
-  width: fit-content;
-  gap: 0.5rem;
-}
-
-.contact-appointment:focus {
-  outline: var(--focus);
-}
-
-.contact-content .contact-appointment {
-  margin: 2rem;
-}
-
-.contact-appointment:hover {
-  color: #ffff;
-}
-
-.contact-appointment:hover svg path {
-  color: #ffff;
-}
-
-.contact-appointment svg {
-  min-width: 25px;
-  min-height: 25px;
-}
-
-.contact-appointment span {
-  display: contents;
-  font-weight: bold;
 }
 
 /* FOOTER */
