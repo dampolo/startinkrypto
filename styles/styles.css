@@ -850,6 +850,7 @@ details[open]::details-content {
   background-color: var(--content-color);
   gap: 1rem;
   flex: 1 0 20rem;
+  border-top: 0.25rem solid #d6a553;
   border-bottom: 0.25rem solid #8f5907;
 }
 
