@@ -25,7 +25,7 @@ class AppointmentButton extends HTMLElement {
 
     // Add styles
     const style = document.createElement("style");
-    style.textContent = /*html*/ `
+    style.textContent = `
             .contact-appointment svg path {
             color: #000000;
             transition: var(--first-transition);
