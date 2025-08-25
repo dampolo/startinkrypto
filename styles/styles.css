@@ -5,8 +5,8 @@
 
 :root {
   --main: #000000;
-  --primary: #f7931a;
-  --secondary: #70c9bb;
+  --primary: #d6a553;
+  --secondary: #8f5907;
   --required: #ff0000;
   --border-color: #e4e5e5;
   --border-radius: 0.625rem;
@@ -247,13 +247,13 @@ main {
 }
 
 .start {
-  background: linear-gradient(180deg, #d6a553, #8f5907);
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .krypto {
-  background: linear-gradient(180deg, #d6a553, #8f5907);
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -290,8 +290,8 @@ main {
 
 .about-me-img,
 .why-we-img {
-  border: 0.25rem solid var(--primary); /* Inner border */
-  box-shadow: 0 0 0 0.25rem var(--secondary); /* Outer border */
+  border: 0.25rem solid var(--secondary); /* Inner border */
+  box-shadow: 0 0 0 0.25rem var(--primary); /* Outer border */
   border-radius: 50%;
   width: 10.5rem;
 }
