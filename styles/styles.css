@@ -5,8 +5,8 @@
 
 :root {
   --main: #000000;
-  --primary: #f7931a;
-  --secondary: #70c9bb;
+  --primary: #d6a553;
+  --secondary: #8f5907;
   --required: #ff0000;
   --border-color: #e4e5e5;
   --border-radius: 0.625rem;
@@ -36,7 +36,7 @@ main {
   background-color: var(--body-bg);
   min-height: calc(100vh - 177px);
   color: var(--letter-color);
-  margin-inline: 1rem;
+  padding-inline: 1rem;
   gap: 1rem;
 }
 
@@ -155,6 +155,15 @@ main {
   transform-origin: left;
 }
 
+.main-nav ul li {
+  opacity: 1;
+  transition: opacity 125ms ease-in-out;
+}
+
+.main-nav ul:hover > li:not(:hover) {
+  opacity: 0.3;
+}
+
 .main-nav ul .languages {
   transform: translateY(-5px);
   column-gap: 1.25rem;
@@ -238,13 +247,13 @@ main {
 }
 
 .start {
-  background: linear-gradient(180deg, #d6a553, #8f5907);
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .krypto {
-  background: linear-gradient(180deg, #d6a553, #8f5907);
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -275,9 +284,13 @@ main {
   width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  background-color: var(--content-color);
   padding: 2rem;
   gap: 2rem;
   margin: auto;
+  background-image: url("../assets/SK-favicon-colorless.svg");
+  background-position: 35px 35px;
+  background-size: 70px 70px;
 }
 
 .about-me-img {
@@ -304,11 +317,6 @@ main {
 }
 
 /* ABOUT ME */
-.about-me {
-  display: flex;
-  text-align: center;
-  gap: 1rem;
-}
 
 .about-me {
   display: flex;
@@ -320,6 +328,7 @@ main {
   width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  background-color: var(--content-color);
   padding: 2rem;
   gap: 2rem;
   margin: auto;
@@ -656,7 +665,6 @@ blockquote footer a:hover {
   padding: 2rem;
   background-color: var(--content-color);
   margin: auto;
-  margin-bottom: 1rem;
   gap: 1rem;
 }
 
@@ -729,9 +737,6 @@ summary {
   padding-right: 2rem;
 }
 
-summary::marker {
-  content: "";
-}
 
 summary::after {
   content: url("../assets/plus.svg");
@@ -741,6 +746,15 @@ summary::after {
 
 details[open] summary::after {
   content: url("../assets/minus.svg");
+}
+
+summary::marker {
+  content: "";
+}
+
+/* For Safari */
+details::-webkit-details-marker {
+    display: none
 }
 
 summary:hover {
@@ -787,6 +801,37 @@ details[open]::details-content {
   scale: 1.02;
 }
 
+/* REVIEW */
+.review {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: fit-content;
+  margin: auto;
+  max-width: var(--max-width);
+  gap: 1rem;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  background-color: var(--content-color);
+  gap: 1rem;
+  flex: 1 0 20rem;
+  border-top: 0.25rem solid #d6a553;
+  border-bottom: 0.25rem solid #8f5907;
+}
+
+.review-star {
+  display: flex;
+}
+
 /* INSTAGRAM */
 
 .instagram {
@@ -802,7 +847,6 @@ details[open]::details-content {
   padding: 2rem;
   background-color: var(--content-color);
   margin: auto;
-  margin-bottom: 1rem;
   gap: 1rem;
 }
 
@@ -1002,6 +1046,7 @@ details[open]::details-content {
   width: 100%;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  background-color: var(--content-color);
   padding: 2rem;
   padding: 7rem 2rem 2rem 2rem;
   position: relative;
