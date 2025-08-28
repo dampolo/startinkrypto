@@ -1146,7 +1146,7 @@ details[open]::details-content {
     height: 50%;
     width: 100%;
     display: none;
-    padding-top: 2rem;
+    padding-top: 3rem;
     background-color: var(--body-bg);
     transition: all 175ms ease-in-out;
     overflow-x: hidden;
