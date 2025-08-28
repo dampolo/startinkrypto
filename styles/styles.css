@@ -315,6 +315,11 @@ main {
   gap: 1rem;
   z-index: 0;
   flex: 1;
+  margin-bottom: 1rem;
+}
+
+.why-start-in-krypto-img-figcaption{
+  display: none;
 }
 
 /* ABOUT ME */
@@ -1195,6 +1200,7 @@ details[open]::details-content {
     border: 2px dotted var(--primary);
     outline: var(--primary);
   }
+
   .why-start-in-krypto-img {
     border: 0.25rem solid var(--primary); /* Inner border */
     box-shadow: 0 0 0 0.25rem var(--secondary); /* Outer border */
