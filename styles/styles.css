@@ -304,6 +304,7 @@ main {
 .why-start-in-krypto-img {
   width: auto;
   height: 295px;
+  object-fit: cover;
 }
 
 .why-start-in-krypto-figure {
