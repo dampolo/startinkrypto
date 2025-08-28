@@ -514,7 +514,8 @@ blockquote footer a:hover {
 }
 
 .legacy a,
-.imprint a {
+.imprint a,
+.appointment-content a {
   align-self: baseline;
 }
 
@@ -523,10 +524,6 @@ blockquote footer a:hover {
 .appointment-content a .strong-arrow {
   transform: rotate(-180deg);
   width: 2rem;
-}
-
-.appointment-content a {
-  align-self: normal;
 }
 
 .strong-help {
