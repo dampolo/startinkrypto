@@ -288,9 +288,7 @@ main {
   padding: 2rem;
   gap: 2rem;
   margin: auto;
-  background-image: url("../assets/SK-favicon-colorless.svg");
-  background-position: 35px 35px;
-  background-size: 70px 70px;
+  background: url("../assets/SK-favicon-colorless.svg") center no-repeat;
 }
 
 .about-me-img {
@@ -302,9 +300,8 @@ main {
 
 
 .why-start-in-krypto-img {
-  width: auto;
-  height: 295px;
   object-fit: cover;
+  height: 60vh;
 }
 
 .why-start-in-krypto-figure {
