@@ -33,6 +33,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: var(--body-bg);
   min-height: calc(100vh - 177px);
   color: var(--letter-color);
@@ -287,7 +288,6 @@ main {
   background-color: var(--content-color);
   padding: 2rem;
   gap: 2rem;
-  margin: auto;
   background: url("../assets/SK-favicon-colorless.svg") center no-repeat;
 }
 
@@ -334,7 +334,6 @@ main {
   background-color: var(--content-color);
   padding: 2rem;
   gap: 2rem;
-  margin: auto;
 }
 
 figcaption {
@@ -395,8 +394,8 @@ figcaption {
   padding: 2rem;
   background-color: var(--content-color);
   gap: 1rem;
-  margin: auto;
 }
+
 .quote img {
   align-self: flex-start;
 }
@@ -428,7 +427,6 @@ blockquote footer a:hover {
   padding: 2rem;
   background-color: var(--content-color);
   gap: 2rem;
-  margin: auto;
   position: relative;
 }
 
@@ -510,12 +508,14 @@ blockquote footer a:hover {
   outline: var(--focus);
 }
 
+.career-content a,
 .legacy a,
 .imprint a,
 .appointment-content a {
   align-self: baseline;
 }
 
+.career a .strong-arrow,
 .legacy a .strong-arrow,
 .imprint a .strong-arrow,
 .appointment-content a .strong-arrow {
@@ -603,7 +603,6 @@ blockquote footer a:hover {
   background-size: cover;
   background-position: top;
   gap: 1rem;
-  margin: auto;
   color: white;
 }
 
@@ -665,7 +664,6 @@ blockquote footer a:hover {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   background-color: var(--content-color);
-  margin: auto;
   gap: 1rem;
 }
 
@@ -809,7 +807,6 @@ details[open]::details-content {
   align-items: center;
   flex-wrap: wrap;
   height: fit-content;
-  margin: auto;
   max-width: var(--max-width);
   gap: 1rem;
 }
@@ -847,7 +844,6 @@ details[open]::details-content {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   background-color: var(--content-color);
-  margin: auto;
   gap: 1rem;
 }
 
@@ -880,7 +876,6 @@ details[open]::details-content {
   box-shadow: var(--box-shadow);
   padding: 2rem;
   background-color: var(--content-color);
-  margin: auto;
   margin-bottom: 1rem;
 }
 
@@ -1036,6 +1031,7 @@ details[open]::details-content {
   position: relative;
 }
 
+.career,
 .legacy,
 .imprint {
   display: flex;
@@ -1051,7 +1047,6 @@ details[open]::details-content {
   padding: 2rem;
   padding: 7rem 2rem 2rem 2rem;
   position: relative;
-  margin: auto;
   margin-bottom: 1rem;
 }
 
@@ -1247,6 +1242,7 @@ details[open]::details-content {
     width: 4rem;
   }
 
+  .career-content,
   .imprint-content,
   .legacy-content {
     padding: 5rem 2rem 2rem 2rem;
