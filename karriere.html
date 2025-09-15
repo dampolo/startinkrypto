@@ -46,13 +46,15 @@
                 <h1>Karriere</h1>
             </div>
 
-            <label class="control-label" for="applicationform-title">Anrede</label>
-            <select id="applicationform-title" autocomplete="honorific-prefix">
-                <option value="">Keine Angabe</option>
-                <option value="Mr.">Herr</option>
-                <option value="Ms.">Frau</option>
-                <option value="Diverse">Divers</option>
-            </select>
+            <div class="form-group">
+                <label class="control-label" for="applicationform-title">Anrede</label>
+                <select id="applicationform-title" class="form-control" autocomplete="honorific-prefix">
+                    <option value="">Keine Angabe</option>
+                    <option value="Mr.">Herr</option>
+                    <option value="Ms.">Frau</option>
+                    <option value="Diverse">Divers</option>
+                </select>
+            </div>
 
             <!-- First Name -->
             <div class="form-group field-applicationform-firstname required">
@@ -86,16 +88,13 @@
                 <p class="help-block help-block-error"></p>
             </div>
 
-            <div class="fileContainer">
-
-                <div class="fileInput">
+            <!-- Upload file -->
+            <div class="form-group fileContainer">
+                <label class="control-label" for="applicationform-file_cv">Bewerbungsunterlagen</label>
                 
-                    <div class="form-group field-applicationform-file_cv required">
-                        <label class="control-label" for="applicationform-file_cv">Bewerbungsunterlagen</label>
-                        <input type="hidden" name="ApplicationForm[file_cv][]" value="">
+                <div class="file-input">
+                    <div class="field-applicationform-file_cv required">
                         <div class="fileuploader fileuploader-theme-default">
-                            <input type="hidden" name="fileuploader-list-file_cv" value="[]">
-                            <input type="file" id="applicationform-file_cv" class="defaultFileInput" name="ApplicationForm[file_cv][]" multiple="multiple" data-file-name="file_cv" data-fileuploader-max-file-size="20971520" data-js-fileuploader="upgraded-field" required="required" aria-required="true">
                             <div class="fileuploader-input">
                                 
                                 <div class="fileuploader-input-caption">
@@ -114,41 +113,36 @@
                                 </ul>
                             </div>
                         </div>
-                        <p class="help-block help-block-error"></p>
                     </div>            
                 
-                    <p class="help-block help-block-error">
-                    Erlaubte Datei Formate: xls, xlsx, ods, pdf, jpeg, jpg, gif, png            
-                    </p>
                     <div class="file-information">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="">
-                <div class="form-group required">
-                    <label class="control-label required">
-                        Hinweise zur Datenschutzerklärung    
-                    </label>
-
-                    <div class="form-group field-applicationform-termsandconditions required">
-                        <div class="checkbox">
                         
-                        <label for="applicationform-termsandconditions">
-                        <input type="checkbox" id="applicationform-termsandconditions" name="ApplicationForm[termsAndConditions]" value="1" aria-required="true">
-                        Ich habe die erforderlichen Datenschutzinformationen zur Kenntnis genommen.<br>Zu unserer Datenschutzbestimmung gelangen Sie <a href="https://www.w11k.de/impressum#datenschutz" target="_blank"> hier </a>
-                        </label>
-                        <p class="help-block help-block-error"></p>
-
-                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <button type="submit" class="" name="login-button">Bewerben</button>
+            </div>
+            <p class="help-block help-block-error">
+            Erlaubte Datei Formate: xls, xlsx, ods, pdf, jpeg, jpg, gif, png            
+            </p>
+
+
+
+
+            <div class="form-group required">
+                <div class="form-group field-applicationform-termsandconditions required">
+                    <div class="checkbox">
+                    
+                    <label for="applicationform-termsandconditions">
+                    <input type="checkbox" id="applicationform-termsandconditions" name="ApplicationForm[termsAndConditions]" value="1" aria-required="true">
+                    Ich habe die erforderlichen Datenschutzinformationen zur Kenntnis genommen.<br>Zu unserer Datenschutzbestimmung gelangen Sie <a href="https://www.w11k.de/impressum#datenschutz" target="_blank"> hier </a>
+                    </label>
+                    <p class="help-block help-block-error"></p>
+
+                    </div>
                 </div>
             </div>
+
+                <appointment-button></appointment-button>
 
         </section>
       </main>
@@ -156,7 +150,9 @@
         <div class="error">
           <div class="error-type"></div>
         </div>
-
+    
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/appointment-button.js"></script>
+
   </body>
 </html>
