@@ -39,16 +39,17 @@
     <main>
 
       <section class="career">
+          <a href="/">
+          <img class="strong-arrow" src="./assets/arrow.svg" alt="Zurück auf die Hauptseite">
+          </a>
             <div class="career-content">
-                <a href="/">
-                <img class="strong-arrow" src="./assets/arrow.svg" alt="Zurück auf die Hauptseite">
-                </a>
                 <h1>Karriere</h1>
             </div>
-
+        
+        
             <div class="form-group">
-                <label class="control-label" for="applicationform-title">Anrede</label>
-                <select id="applicationform-title" class="form-control" autocomplete="honorific-prefix">
+                <label class="control-label" for="title">Anrede</label>
+                <select id="title" class="form-control">
                     <option value="">Keine Angabe</option>
                     <option value="Mr.">Herr</option>
                     <option value="Ms.">Frau</option>
@@ -57,70 +58,89 @@
             </div>
 
             <!-- First Name -->
-            <div class="form-group field-applicationform-firstname required">
-                <label class="control-label" for="applicationform-firstname">Vorname</label>
-                <input type="text" id="applicationform-firstname" class="form-control" name="applicationform-firstname" required="required" autocomplete="given-name" aria-required="true">
+            <div class="form-group" required>
+                <label class="control-label" for="fname">Vorname</label>
+                <input type="text" id="fname" class="form-control" name="first-name" required="required" aria-required="true">
 
                 <p class="help-block help-block-error"></p>
             </div>
             
             <!-- Last Name  -->
-            <div class="form-group field-applicationform-lastname required">
-                <label class="control-label" for="applicationform-lastname">Nachname</label>
-                <input type="text" id="applicationform-lastname" class="form-control" name="applicationform-lastname" required="required" autocomplete="family-name" aria-required="true">
+            <div class="form-group" required>
+                <label class="control-label" for="lname">Nachname</label>
+                <input type="text" id="lname" class="form-control" name="last-name" required="required" aria-required="true">
 
                 <p class="help-block help-block-error"></p>
             </div>
 
             <!-- Email -->
-            <div class="form-group field-applicationform-email required">
-                <label class="control-label" for="applicationform-email">E-Mail-Adresse</label>
-                <input type="text" id="applicationform-email" class="form-control" name="applicationform-email" required="required" autocomplete="email" aria-required="true">
+            <div class="form-group" required>
+                <label class="control-label" for="email">E-Mail-Adresse</label>
+                <input type="email" id="email" class="form-control" name="email" required="required" aria-required="true">
 
                 <p class="help-block help-block-error"></p>
             </div>
             
             <!-- Telephone number -->
-            <div class="form-group field-applicationform-phonenumber required">
+            <div class="form-group" required>
                 <label class="control-label" for="applicationform-phonenumber">Telefonnummer</label>
-                <input type="text" id="applicationform-phonenumber" class="form-control" name="applicationform-phonenumber" required="required" autocomplete="tel" aria-required="true">
+                <input type="tel" id="phonenumber" class="form-control" name="phonenumber" required="required" aria-required="true">
 
                 <p class="help-block help-block-error"></p>
             </div>
 
             <!-- Upload file -->
-            <div class="form-group fileContainer">
-                <label class="control-label" for="applicationform-file_cv">Bewerbungsunterlagen</label>
+            <div class="form-group" required>
+
+                <label class="control-label" for="file">Lebenslauf</label>
                 
-                <div class="file-input">
-                    <div class="field-applicationform-file_cv required">
-                        <div class="fileuploader fileuploader-theme-default">
-                            <div class="fileuploader-input">
+                <div class="file-input-container">
+                    
+                    <label for="file1" class="file-upload visually-hidden">Datei auswählen</label>
+                    <input id="file1" name="file1" type="file"/>
                                 
-                                <div class="fileuploader-input-caption">
-                                    <span>Wählen Sie Dateien zum Hochladen aus</span>
-                                </div>
-
-                                <button type="button" class="fileuploader-input-button">
-                                    <span>Dateien auswählen</span>
-                                </button>
-                                
-                            </div>
-
-                            <div class="fileuploader-items">
-                                <ul class="fileuploader-items-list">
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>            
-                
                     <div class="file-information">
                         
                     </div>
                 </div>
 
             </div>
+
+            <!-- Upload file -->
+            <div class="form-group">
+
+                <label class="control-label" for="file3">Andere Anhänge</label>
+                
+                <div class="file-input-container">
+                    
+                    <label for="file2" class="file-upload visually-hidden">Datei auswählen</label>
+                    <input id="file2" name="file2" type="file"/>
+                                
+                    <div class="file-information">
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Upload file -->
+            <div class="form-group">
+
+                <label class="control-label" for="file">Andere Anhänge</label>
+                
+                <div class="file-input-container">
+                    
+                    <label for="file2" class="file-upload visually-hidden">Datei auswählen</label>
+                    <input id="file2" name="file2" type="file"/>
+                                
+                    <div class="file-information">
+                        
+                    </div>
+                </div>
+
+            </div>
+
+
             <p class="help-block help-block-error">
             Erlaubte Datei Formate: xls, xlsx, ods, pdf, jpeg, jpg, gif, png            
             </p>
@@ -128,17 +148,17 @@
 
 
 
-            <div class="form-group required">
-                <div class="form-group field-applicationform-termsandconditions required">
-                    <div class="checkbox">
-                    
-                    <label for="applicationform-termsandconditions">
-                    <input type="checkbox" id="applicationform-termsandconditions" name="ApplicationForm[termsAndConditions]" value="1" aria-required="true">
-                    Ich habe die erforderlichen Datenschutzinformationen zur Kenntnis genommen.<br>Zu unserer Datenschutzbestimmung gelangen Sie <a href="https://www.w11k.de/impressum#datenschutz" target="_blank"> hier </a>
+            <div class="form-group" required>                    
+                <label class="control-label" for="checkbox">Hinweise zur Datenschutzerklärung</label>
+                <div class="checkbox-content">
+                    <label>
+                        <input type="checkbox" id="checkbox" name="checkbox" aria-required="true">
+                        <span class="checkbox-text">
+                            Ich habe die erforderlichen Datenschutzinformationen zur Kenntnis genommen.<br>
+                            Zu unserer Datenschutzbestimmung gelangen Sie 
+                            <a href="datenschutz.html" target="_blank">hier</a>
+                        </span>
                     </label>
-                    <p class="help-block help-block-error"></p>
-
-                    </div>
                 </div>
             </div>
 

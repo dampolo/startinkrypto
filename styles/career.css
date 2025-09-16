@@ -42,61 +42,55 @@
     0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-.form-group.required .control-label:after,
-span.required:after {
+.form-group[required] .control-label:after {
   content: " *";
   color: red;
 }
 
-.fileContainer {
-  height: auto;
-  width: 45rem;
-}
 
-.fileuploader-input {
+.file-input-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border: 1px solid transparent;
-  border-radius: 30px;
   cursor: pointer;
   padding: 0.375rem 0.75rem;
   width: 45rem;
-}
-
-.file-input {
-  position: relative;
-  display: inline-block;
-  align-self: flex-start;
   border: 0.063rem solid #ccc;
-  border-radius: 0.25rem;
   background-color: #fff;
-  background: #fff;
-  border-radius: 4px;
   color: #888;
-  font-weight: 700;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  padding: 8px 0;
-  margin: 8px 0;
 }
 
-.fileuploader-input-button {
-  display: inline-block;
-  margin: 0;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 4px;
-  outline: 0;
-  font-weight: 700;
+input::file-selector-button {
+  padding: .875rem 1.25rem;
+  border: thin solid grey;
+  border-radius: 3px;
   cursor: pointer;
-  vertical-align: middle;
-  text-decoration: none;
+  background: linear-gradient(180deg, #d6a65357, #8f59073f);
+  border: 0.063rem solid transparent;
+  transition: var(--first-transition);
 }
 
-.fileuploader-input-button:hover {
-  background-color: #eee;
+input[type="file"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+ color: #fff;
+}
+
+.checkbox-content {
+  cursor: pointer;
+  width: 45rem;
+}
+
+.checkbox-text {
+  margin-left: 0.5rem;
+}
+
+.checkbox-content label {
+  display: flex;
+  cursor: pointer;
 }
 
 .help-block {
@@ -104,4 +98,35 @@ span.required:after {
   margin-top: 5px;
   margin-bottom: 10px;
   color: #737373;
+}
+
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin-top: 0.5rem;
+  font: inherit;
+  color: var(--secondary);
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid var(--secondary);
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: var(--first-transition);
+  box-shadow: inset 1em 1em var(--secondary);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
