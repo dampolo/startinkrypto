@@ -1,3 +1,14 @@
+@import "./main-button.css";
+
+.career-content {
+  margin-bottom: 1rem;
+}
+
+.career-content h1 {
+  text-align: center;
+}
+
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -129,4 +140,16 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   transform: scale(1);
+}
+
+.file-input-container:has(input:user-invalid) {
+  border-color: red;
+}
+
+input:user-invalid {
+  border-color: var(--required);
+}
+
+.error-message {
+  color: var(--required);
 }

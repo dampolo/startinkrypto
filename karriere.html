@@ -44,134 +44,138 @@
           </a>
             <div class="career-content">
                 <h1>Karriere</h1>
-            </div>
-        
-        
-            <div class="form-group">
-                <label class="control-label" for="title">Anrede</label>
-                <select id="title" class="form-control">
-                    <option value="">Keine Angabe</option>
-                    <option value="Mr.">Herr</option>
-                    <option value="Ms.">Frau</option>
-                    <option value="Diverse">Divers</option>
-                </select>
-            </div>
-
-            <!-- First Name -->
-            <div class="form-group" required>
-                <label class="control-label" for="fname">Vorname</label>
-                <input type="text" id="fname" class="form-control" name="first-name" required="required" aria-required="true">
-
-                <p class="help-block help-block-error"></p>
+                <p>Wir haben momentan keine offene Stellen</p>
             </div>
             
-            <!-- Last Name  -->
-            <div class="form-group" required>
-                <label class="control-label" for="lname">Nachname</label>
-                <input type="text" id="lname" class="form-control" name="last-name" required="required" aria-required="true">
+            <h2>Initiativbewerbung</h2>
+        
+            <form action="" novalidate>
 
-                <p class="help-block help-block-error"></p>
-            </div>
+                <div class="form-group">
+                    <label class="control-label" for="title">Anrede</label>
+                    <select id="title" name="title" class="form-control">
+                        <option value="">Keine Angabe</option>
+                        <option value="Herr">Herr</option>
+                        <option value="Frau">Frau</option>
+                        <option value="Divers">Divers</option>
+                    </select>
+                </div>
 
-            <!-- Email -->
-            <div class="form-group" required>
-                <label class="control-label" for="email">E-Mail-Adresse</label>
-                <input type="email" id="email" class="form-control" name="email" required="required" aria-required="true">
+                <!-- First Name -->
+                <div class="form-group" required>
+                    <label class="control-label" for="fname">Vorname</label>
+                    <input type="text" id="fname" class="form-control" name="first-name" required="required" aria-required="true">
 
-                <p class="help-block help-block-error"></p>
-            </div>
-            
-            <!-- Telephone number -->
-            <div class="form-group" required>
-                <label class="control-label" for="applicationform-phonenumber">Telefonnummer</label>
-                <input type="tel" id="phonenumber" class="form-control" name="phonenumber" required="required" aria-required="true">
-
-                <p class="help-block help-block-error"></p>
-            </div>
-
-            <!-- Upload file -->
-            <div class="form-group" required>
-
-                <label class="control-label" for="file">Lebenslauf</label>
+                    <p class="error-message error-message-error" aria-live="polite"></p>
+                </div>
                 
-                <div class="file-input-container">
-                    
-                    <label for="file1" class="file-upload visually-hidden">Datei auswählen</label>
-                    <input id="file1" name="file1" type="file"/>
-                                
-                    <div class="file-information">
-                        
-                    </div>
+                <!-- Last Name  -->
+                <div class="form-group" required>
+                    <label class="control-label" for="lname">Nachname</label>
+                    <input type="text" id="lname" class="form-control" name="last-name" required="required" aria-required="true">
+
+                    <p class="error-message error-message-error" aria-live="polite"></p>
                 </div>
 
-            </div>
+                <!-- Email -->
+                <div class="form-group" required>
+                    <label class="control-label" for="email">E-Mail-Adresse</label>
+                    <input type="email" id="email" data-error="Das ist keine gültige E-Mail-Adresse." class="form-control" name="email" required="required" aria-required="true">
 
-            <!-- Upload file -->
-            <div class="form-group">
-
-                <label class="control-label" for="file3">Andere Anhänge</label>
+                    <p class="error-message error-message-error" aria-live="polite"></p>
+                </div>
                 
-                <div class="file-input-container">
+                <!-- Telephone number -->
+                <div class="form-group" required>
+                    <label class="control-label" for="applicationform-phonenumber">Telefonnummer</label>
+                    <input type="tel" id="phonenumber" class="form-control" name="phonenumber" required="required" aria-required="true">
+
+                    <p class="error-message error-message-error" aria-live="polite"></p>
+                </div>
+
+                <!-- Upload file -->
+                <div class="form-group" >
+
+                    <label class="control-label" for="file">Lebenslauf</label>
                     
-                    <label for="file2" class="file-upload visually-hidden">Datei auswählen</label>
-                    <input id="file2" name="file2" type="file"/>
-                                
-                    <div class="file-information">
-                        
+                    <div class="file-input-container">
+                        <label for="file" class="file-upload visually-hidden">Datei auswählen</label>
+                        <input id="file" name="file" type="file" required/>
                     </div>
+                    <p class="error-message error-message-error" aria-live="polite"></p>
+
+
                 </div>
 
-            </div>
+                <!-- Upload file -->
+                <div class="form-group">
 
-            <!-- Upload file -->
-            <div class="form-group">
-
-                <label class="control-label" for="file">Andere Anhänge</label>
-                
-                <div class="file-input-container">
+                    <label class="control-label" for="file3">Andere Anhänge</label>
                     
-                    <label for="file2" class="file-upload visually-hidden">Datei auswählen</label>
-                    <input id="file2" name="file2" type="file"/>
-                                
-                    <div class="file-information">
-                        
+                    <div class="file-input-container">
+                        <label for="file2" class="file-upload visually-hidden">Datei auswählen</label>
+                        <input id="file2" name="file2" type="file"/>
                     </div>
+
                 </div>
 
-            </div>
+                <!-- Upload file -->
+                <div class="form-group">
 
+                    <label class="control-label" for="file">Andere Anhänge</label>
+                    
+                    <div class="file-input-container">
+                        <label for="file2" class="file-upload visually-hidden">Datei auswählen</label>
+                        <input id="file2" name="file2" type="file"/>
+                    </div>
 
-            <p class="help-block help-block-error">
-            Erlaubte Datei Formate: xls, xlsx, ods, pdf, jpeg, jpg, gif, png            
-            </p>
-
-
-
-
-            <div class="form-group" required>                    
-                <label class="control-label" for="checkbox">Hinweise zur Datenschutzerklärung</label>
-                <div class="checkbox-content">
-                    <label>
-                        <input type="checkbox" id="checkbox" name="checkbox" aria-required="true">
-                        <span class="checkbox-text">
-                            Ich habe die erforderlichen Datenschutzinformationen zur Kenntnis genommen.<br>
-                            Zu unserer Datenschutzbestimmung gelangen Sie 
-                            <a href="datenschutz.html" target="_blank">hier</a>
-                        </span>
-                    </label>
                 </div>
-            </div>
 
-                <appointment-button></appointment-button>
 
+                <p class="help-text">
+                Erlaubte Datei Formate: xls, xlsx, ods, pdf, jpeg, jpg, gif, png            
+                </p>
+
+
+
+
+                <div class="form-group">                    
+                    <label class="control-label" for="checkbox">Hinweise zur Datenschutzerklärung</label>
+                    <div class="checkbox-content">
+                        <label>
+                            <input type="checkbox" id="checkbox" data-error="Bitte bestätige unsere Datenschutzerklärung" name="checkbox" aria-required="true" required>
+                            <span class="checkbox-text">
+                                Ich habe die erforderlichen Datenschutzinformationen zur Kenntnis genommen.<br>
+                                Zu unserer Datenschutzerklärung gelangen Sie 
+                                <a href="datenschutz.html" target="_blank">hier</a>
+                            </span>
+                        </label>
+                    </div>
+                    <p class="error-message error-message-error" aria-live="polite"></p>
+                </div>
+
+                <button class="main-button" href="appointment.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+                        <path d="M16 3v4"></path>
+                        <path d="M8 3v4"></path>
+                        <path d="M4 11h16"></path>
+                        <path d="M8 14v4"></path>
+                        <path d="M12 14v4"></path>
+                        <path d="M16 14v4"></path>
+                    </svg>Bewerben
+                </button>
+            </form>
         </section>
-      </main>
+    </main>
     <footer class="footer" w3-include-html="templates/footer.html"></footer>
         <div class="error">
           <div class="error-type"></div>
         </div>
     
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/carerr.js"></script>
     <script src="./scripts/appointment-button.js"></script>
 
   </body>
