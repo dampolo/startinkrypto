@@ -20,11 +20,18 @@ function validateField(field) {
     }
 }
 
+
+form.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("blur", () => {
+        validateField(input)
+    })
+})
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     let isValid = true;
-    const fields = form.querySelectorAll("input, select")
+    const fields = form.querySelectorAll("input")
     fields.forEach((field) => {
             console.log(field.name);
             const fieldValid = validateField(field);
@@ -32,6 +39,4 @@ form.addEventListener("submit", (event) => {
             isValid = false
         }
     })
-    
-
 })

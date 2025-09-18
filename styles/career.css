@@ -152,4 +152,5 @@ input:user-invalid {
 
 .error-message {
   color: var(--required);
+  font-size: 0.7rem;
 }
