@@ -1,8 +1,3 @@
-.main-button svg path {
-  color: #000000;
-  transition: var(--first-transition);
-}
-
 .main-button {
   background: linear-gradient(180deg, #d6a553, #8f5907);
   color: #000000;
@@ -18,12 +13,15 @@
   text-align: center;
 }
 
-.main-button:focus-visible {
-  outline: var(--focus);
+
+.main-button svg path {
+  color: #000000;
+  transition: var(--first-transition);
 }
 
-.button-content .main-button {
-  margin: 2rem;
+
+.main-button:focus-visible {
+  outline: var(--focus);
 }
 
 .main-button:hover {
