@@ -3,61 +3,81 @@ const form = document.querySelector("form");
 
 function validateField(field) {
     const group = field.closest(".form-group");
-    const errorEl = group?.querySelector(".error-message");
+    const errorEl = group.querySelector(".error-message");
 
     if (field.type === "file") {
         // Case 1: no file selected but required
-        if (field.validity.valueMissing) {
+        if (field.required && field.validity.valueMissing) {
             if (errorEl) errorEl.textContent = "Bitte laden Sie Ihren Lebenslauf hoch.";
             return false;
         }
 
-        // Case 2: wrong file type
-        if (!validateFile(field)) {
-            if (errorEl) errorEl.textContent = "Bitte nur xls, xlsx, ods, pdf, jpeg, jpg, gif oder png hochladen.";
+        // Case 2: wrong file type (but only if a file is selected)
+        if (field.files.length > 0 && !validateFile(field)) {
+            if (errorEl) errorEl.textContent = "Bitte nur PDF hochladen.";
+            field.value = "";
             return false;
         }
-
-        // Case 3: valid
-        if (errorEl) errorEl.textContent = "";
-        return true;
     }
 
-    // All other input types
+    // For text/other inputs
+    const value = field.value.trim();
+
+    if (value.length === 0 && field.required) {
+        if (errorEl) errorEl.textContent = "Dieses Feld darf nicht leer sein.";
+        return false;
+    }
+
+    if (value.length < 2 && field.required) {
+        if (errorEl) errorEl.textContent = "Mindestens 2 Zeichen erforderlich.";
+        return false;
+    }
+
+    // Fallback to HTML5 validation if needed
     if (!field.validity.valid) {
         if (errorEl) errorEl.textContent = field.dataset.error || "Ungültige Eingabe.";
         return false;
-    } else {
-        if (errorEl) errorEl.textContent = "";
-        return true;
     }
+
+    // If everything is fine
+    if (errorEl) errorEl.textContent = "";
+    return true;
 }
 
 
 form.querySelectorAll("input").forEach((input) => {
-    input.addEventListener("blur", () => {
+    if (input.type === "file") {
+        input.addEventListener("change", () => {
             validateField(input)
-    })
+        })
+    } else {
+        input.addEventListener("blur", () => {
+            validateField(input)
+        })
+    }
 })
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     let isValid = true;
+    let firstInvalidField = null;
+
     const fields = form.querySelectorAll("input, select")
     fields.forEach((field) => {
-            console.log(field.value);
             const fieldValid = validateField(field);
         if(!fieldValid) {
             isValid = false
+            if (!firstInvalidField) {
+                firstInvalidField = field; // remember the first invalid
+            }
         }
     });
-    console.log(isValid);
-    
+
     if(isValid) {
         form.reset();
     } else {
-        form.querySelector(":invalid").focus();
+        firstInvalidField.focus();
     }
 });
 
@@ -66,10 +86,7 @@ function validateFile(field) {
         return false;
     }
     
-    const allowedExtensions = [
-    "xls", "xlsx", "ods", "pdf",
-    "jpeg", "jpg", "gif", "png"
-    ];
+    const allowedExtensions = ["pdf"];
 
     const file = field.files[0];
     const fileName = file.name.toLowerCase();

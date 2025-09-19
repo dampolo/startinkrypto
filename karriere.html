@@ -94,16 +94,15 @@
                 </div>
 
                 <!-- Upload file -->
-                <div class="form-group" >
-
+                <div class="form-group" required>
+                    
                     <label class="control-label" for="file">Lebenslauf</label>
                     
                     <div class="file-input-container">
                         <label for="file" class="file-upload visually-hidden">Datei auswählen</label>
-                        <input id="file" name="file" type="file" accept=".xls,.xlsx,.ods,.jpeg,.jpg,.gif,.png,.pdf"  required/>
+                        <input id="file" name="file" type="file" accept=".pdf"  required/>
                     </div>
                     <p class="error-message error-message-error" aria-live="polite"></p>
-
 
                 </div>
 
@@ -114,8 +113,9 @@
                     
                     <div class="file-input-container">
                         <label for="file2" class="file-upload visually-hidden">Datei auswählen</label>
-                        <input id="file2" name="file2" type="file"/>
+                        <input id="file2" name="file2" accept=".pdf" type="file"/>
                     </div>
+                    <span class="error-message error-message-error" aria-live="polite"></span>
 
                 </div>
 
@@ -126,11 +126,13 @@
                     
                     <div class="file-input-container">
                         <label for="file3" class="file-upload visually-hidden">Datei auswählen</label>
-                        <input id="file3" name="file3" type="file"/>
+                        <input id="file3" name="file3" accept=".pdf" type="file"/>
                     </div>
+                    <span class="error-message error-message-error" aria-live="polite"></span>
+
 
                     <p class="help-text">
-                    Erlaubte Datei Formate: xls, xlsx, ods, pdf, jpeg, jpg, gif, png            
+                    Erlaubte Datei Formate: pdf            
                     </p>
                 </div>
 
