@@ -73,6 +73,9 @@ a, button {
   color: black;
 }
 
+.link {
+  text-decoration: underline;
+}
 ul {
   list-style-type: none;
 }
