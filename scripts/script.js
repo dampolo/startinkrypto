@@ -73,6 +73,7 @@ function initEventListeners() {
   handleLastLinkFocus();
   handleSpaceClick();
   handleCloseMenuOnLogo();
+  headerAnimation();
 }
 
 function closeMenu() {
@@ -104,6 +105,7 @@ function openMenu() {
     document.querySelector(".hamburger").classList.toggle("is-active");
     document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
     document.querySelector(".menu-list").classList.toggle("show-menu");
+    document.querySelector(".header").classList.remove("reveal");
     toggleAriaLabel();
     toggleAriaExpanded()
   });
@@ -170,5 +172,21 @@ function handleSpaceClick() {
 
       }
     });
+  });
+}
+
+// Animate of header fade-in
+function headerAnimation() {
+  const header = document.querySelector(".header");
+  
+  window.addEventListener("scroll", () => {
+    let revealed = false;
+    if (window.scrollY > 50 && !revealed) {
+      header.classList.add("reveal");
+      revealed = true; // play animation only once
+    } else if (window.scrollY === 0) {
+      header.classList.remove("reveal");
+      revealed = false;
+    }
   });
 }

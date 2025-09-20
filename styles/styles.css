@@ -57,11 +57,15 @@ main {
 
 /* HEADER */
 .header {
-  position: absolute;
-  top: 0.5rem;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 1;
+}
+
+.header.reveal {
+  animation: revealHeader 1000ms ease forwards;
 }
 
 .main-nav {
