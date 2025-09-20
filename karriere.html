@@ -167,22 +167,21 @@
                 </button>
             </form>
         </section>
-
             <!-- Dialog -->
+            <dialog id="dataDialog">
+                <h2>Ihre Angaben</h2>
+                <div class="dialog-content" id="dialogContent"></div>
+                
+                <div class="buttons">
+                    <button id="cancelBtn">Zurück</button>
+                    <button id="confirmBtn">Bestätigen</button>
+                </div>
+            </dialog>
         </main>
         <footer class="footer" w3-include-html="templates/footer.html"></footer>
         <div class="error">
             <div class="error-type"></div>
         </div>
-        <dialog id="dataDialog">
-            <h2>Ihre Angaben</h2>
-            <div class="dialog-content" id="dialogContent"></div>
-            
-            <div class="buttons">
-                <button id="cancelBtn">Zurück</button>
-                <button id="confirmBtn">Bestätigen</button>
-            </div>
-        </dialog>
     
     <script src="./scripts/script.js"></script>
     <script src="./scripts/career.js"></script>

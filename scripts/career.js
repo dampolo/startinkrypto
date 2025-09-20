@@ -106,6 +106,8 @@ function showDialog() {
   let html = "";
   formData.forEach((value, key) => {
     if (value instanceof File && value.name) {
+      console.log(value);
+      
       html += `<p><strong>${key}:</strong> ${value.name}</p>`;
     } else {
       html += `<p><strong>${key}:</strong> ${value}</p>`;
