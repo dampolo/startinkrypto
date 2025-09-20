@@ -78,7 +78,8 @@ function initEventListeners() {
 
 function closeMenu() {
   const links = document.querySelectorAll(".link");
-
+  console.log('TEST');
+  
   links.forEach((link) => {
     link.addEventListener("click", () => {
       handleCloseMenu();
@@ -106,6 +107,8 @@ function openMenu() {
     document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
     document.querySelector(".menu-list").classList.toggle("show-menu");
     document.querySelector(".header").classList.remove("reveal");
+    document.querySelector(".header").classList.toggle("menu-open");
+
     toggleAriaLabel();
     toggleAriaExpanded()
   });
@@ -181,7 +184,7 @@ function headerAnimation() {
   
   window.addEventListener("scroll", () => {
     let revealed = false;
-    if (window.scrollY > 50 && !revealed) {
+    if (window.scrollY > 50 && !revealed && !header.classList.contains("menu-open")) {
       header.classList.add("reveal");
       revealed = true; // play animation only once
     } else if (window.scrollY === 0) {
