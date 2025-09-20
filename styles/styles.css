@@ -1144,16 +1144,19 @@ details[open]::details-content {
     position: fixed;
     top: 0;
     right: 0;
-    height: 50%;
+    height: 100dvh;
     width: 100%;
     display: none;
     padding-top: 3rem;
-    background-color: var(--body-bg);
     transition: all 175ms ease-in-out;
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: 1;
     box-shadow: var(--box-shadow);
+    background-color: var(--body-bg);
+    background-image: url(../assets/SK-favicon-colorless.svg);
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .main-nav button {
