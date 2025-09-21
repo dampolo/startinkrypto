@@ -516,12 +516,14 @@ blockquote footer a:hover {
   outline: var(--focus);
 }
 
+.faq a,
 .legacy a,
 .imprint a,
 .appointment-content a {
   align-self: baseline;
 }
 
+.faq a .strong-arrow,
 .legacy a .strong-arrow,
 .imprint a .strong-arrow,
 .appointment-content a .strong-arrow {
@@ -1013,6 +1015,7 @@ details[open]::details-content {
   font-size: clamp(0.1rem, 3vw, 1rem);
 }
 
+.faq,
 .appointment,
 .legacy,
 .imprint {
@@ -1035,6 +1038,7 @@ details[open]::details-content {
   position: relative;
 }
 
+.faq,
 .legacy,
 .imprint {
   display: flex;
@@ -1123,6 +1127,10 @@ details[open]::details-content {
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
+}
+
+.faq {
+  flex: 1;
 }
 
 @media (max-width: 950px) {
