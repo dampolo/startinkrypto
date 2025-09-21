@@ -76,7 +76,6 @@ form.addEventListener("submit", (event) => {
 
   if (isValid) {
     showDialog();
-    // form.reset();
   } else {
     firstInvalidField.focus();
   }
@@ -95,22 +94,39 @@ function validateFile(field) {
   return allowedExtensions.includes(extension);
 }
 
-const dialog = document.getElementById("dataDialog");
-const dialogContent = document.getElementById("dialogContent");
-const cancelBtn = document.getElementById("cancelBtn");
-const confirmBtn = document.getElementById("confirmBtn");
+const dialog = document.querySelector(".dialog");
+const dialogContent = document.querySelector(".dialog-content");
+const cancelBtn = document.querySelectorAll(".cancel-button");
+const confirmBtn = document.querySelector(".confirm-button");
+
+const labels = {
+  "title": "Anrede",
+  "first-name": "Vorname",
+  "last-name": "Nachname",
+  "email": "E-Mail-Adresse",
+  "phonenumber": "Telefonnummer",
+  "file": "Lebenslauf",
+  "file2": "Andere Anhänge",
+  "file3": "Andere Anhänge",
+  "checkbox": "Datenschutzerklärung"
+};
+
 
 // Collect form data
 function showDialog() {
   const formData = new FormData(form);
   let html = "";
   formData.forEach((value, key) => {
-    if (value instanceof File && value.name) {
-      console.log(value);
-      
-      html += `<p><strong>${key}:</strong> ${value.name}</p>`;
+     const label = labels[key] || key;
+    
+    if (key === "checkbox") {
+      html += `<p><strong class="title">${label}:</strong> bestätigt</p>`;
+    } else if (value instanceof File) {
+      if (value.name) {
+        html += `<p><strong class="title">${label}:</strong> ${value.name}</p>`;
+      }
     } else {
-      html += `<p><strong>${key}:</strong> ${value}</p>`;
+      html += `<p><strong class="title">${label}:</strong> ${value}</p>`;
     }
   });
   
@@ -118,11 +134,15 @@ function showDialog() {
     dialog.showModal();
 }
 
-cancelBtn.addEventListener("click", () => {
-  dialog.close();
-});
+cancelBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    dialog.close();
+  })
+})
+
 
 confirmBtn.addEventListener("click", () => {
   dialog.close();
-  form.submit(); // Actually submit form after confirmation
+  form.reset();
+  form.submit();
 });

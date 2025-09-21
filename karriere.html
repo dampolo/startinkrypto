@@ -153,28 +153,22 @@
                     </div>
                 </div>
 
-                <button class="main-button" href="appointment.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
-                        <path d="M16 3v4"></path>
-                        <path d="M8 3v4"></path>
-                        <path d="M4 11h16"></path>
-                        <path d="M8 14v4"></path>
-                        <path d="M12 14v4"></path>
-                        <path d="M16 14v4"></path>
-                    </svg>Bewerben
+                <button class="main-button">
+                    Weiter
                 </button>
             </form>
         </section>
             <!-- Dialog -->
-            <dialog id="dataDialog">
+            <dialog class="dialog">
+                <button class="cancel-button">
+                    <img class="strong-arrow" src="./assets/arrow.svg" alt="Zurück auf die Karriereseite">
+                </button>
                 <h2>Ihre Angaben</h2>
-                <div class="dialog-content" id="dialogContent"></div>
+                <div class="dialog-content"></div>
                 
                 <div class="buttons">
-                    <button id="cancelBtn">Zurück</button>
-                    <button id="confirmBtn">Bestätigen</button>
+                    <button class="cancel-button main-button">Zurück</button>
+                    <button class="confirm-button main-button">Bestätigen</button>
                 </div>
             </dialog>
         </main>

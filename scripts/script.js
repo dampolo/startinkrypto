@@ -73,11 +73,12 @@ function initEventListeners() {
   handleLastLinkFocus();
   handleSpaceClick();
   handleCloseMenuOnLogo();
+  headerAnimation();
 }
 
 function closeMenu() {
-  const links = document.querySelectorAll(".link");
-
+  const links = document.querySelectorAll(".nav-link");
+  
   links.forEach((link) => {
     link.addEventListener("click", () => {
       handleCloseMenu();
@@ -104,6 +105,9 @@ function openMenu() {
     document.querySelector(".hamburger").classList.toggle("is-active");
     document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
     document.querySelector(".menu-list").classList.toggle("show-menu");
+    document.querySelector(".header").classList.remove("reveal");
+    document.querySelector(".header").classList.toggle("menu-open");
+
     toggleAriaLabel();
     toggleAriaExpanded()
   });
@@ -126,7 +130,7 @@ function toggleAriaLabel() {
 
 
 function handleLastLinkFocus() {
-   const links = document.querySelectorAll(".link");  
+   const links = document.querySelectorAll(".nav-link");  
    const lastLink = links[links.length - 1];
 
     let isShiftTab = false;
@@ -170,5 +174,21 @@ function handleSpaceClick() {
 
       }
     });
+  });
+}
+
+// Animate of header fade-in
+function headerAnimation() {
+  const header = document.querySelector(".header");
+  
+  window.addEventListener("scroll", () => {
+    let revealed = false;
+    if (window.scrollY > 50 && !revealed && !header.classList.contains("menu-open")) {
+      header.classList.add("reveal");
+      revealed = true; // play animation only once
+    } else if (window.scrollY === 0) {
+      header.classList.remove("reveal");
+      revealed = false;
+    }
   });
 }
