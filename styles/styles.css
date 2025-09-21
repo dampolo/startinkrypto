@@ -1,5 +1,7 @@
 @import "./resets.css";
 @import "./animations.css";
+@import "./main-button.css";
+
 
 @import "../node_modules/hamburgers/dist/hamburgers.css";
 
@@ -1110,17 +1112,17 @@ details[open]::details-content {
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+  position: absolute !important;
+  width: 1px  !important;
+  height: 1px  !important;
+  margin: -1px  !important;
+  border: 0  !important;
+  padding: 0  !important;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
 }
 
 @media (max-width: 950px) {

@@ -13,6 +13,12 @@
   text-align: center;
 }
 
+.main-button.general-button {
+  position: fixed;
+  bottom: 1.5625rem;
+  right: 1.5625rem;
+  z-index: 1000;
+}
 
 .main-button svg path {
   color: #000000;
@@ -38,6 +44,5 @@
 }
 
 .main-button span {
-  display: contents;
   font-weight: bold;
 }
