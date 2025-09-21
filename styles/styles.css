@@ -115,7 +115,7 @@ main {
 
 .main-nav ul {
   display: flex;
-  gap: 2.25rem;
+  gap: 1.25rem;
   list-style-type: none;
 }
 
@@ -124,7 +124,7 @@ main {
   display: flex;
   justify-content: center;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 0.5vw, 2rem);
   height: 2rem;
   line-height: 1.725rem;
   color: inherit;
@@ -240,7 +240,7 @@ main {
 
 .welcome-content h1 {
   text-align: center;
-  font-size: clamp(2.5rem, 4vw, 6.5rem);
+  font-size: clamp(2.5rem, 3.5vw, 6.5rem);
   margin-top: -15rem;
 }
 
@@ -436,14 +436,14 @@ blockquote footer a:hover {
   position: relative;
 }
 
-.about-me-title {
+.our-partner-title,
+.why-start-title,
+.about-me-title,
+.service-title
+.instagram-title
+{
   font-size: 1.5rem;
   text-align: center;
-}
-
-.service-title {
-  font-size: 1.5rem;
-  z-index: 0;
 }
 
 .service .my-offer {
@@ -673,11 +673,6 @@ blockquote footer a:hover {
   gap: 1rem;
 }
 
-.our-partner-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
 .partner-list {
   width: 100%;
 }
@@ -853,11 +848,6 @@ details[open]::details-content {
   background-color: var(--content-color);
   margin: auto;
   gap: 1rem;
-}
-
-.instagram-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
 
 .instagram a {
@@ -1235,7 +1225,7 @@ details[open]::details-content {
 
   .main-nav .pos-fix-hamburger {
     right: 16px;
-    top: 3px;
+    top: -5px;
   }
 
   .welcome {

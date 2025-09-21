@@ -77,8 +77,7 @@ function initEventListeners() {
 }
 
 function closeMenu() {
-  const links = document.querySelectorAll(".link");
-  console.log('TEST');
+  const links = document.querySelectorAll(".nav-link");
   
   links.forEach((link) => {
     link.addEventListener("click", () => {
@@ -131,7 +130,7 @@ function toggleAriaLabel() {
 
 
 function handleLastLinkFocus() {
-   const links = document.querySelectorAll(".link");  
+   const links = document.querySelectorAll(".nav-link");  
    const lastLink = links[links.length - 1];
 
     let isShiftTab = false;
