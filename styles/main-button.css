@@ -44,5 +44,10 @@
 }
 
 .main-button span {
+  display: contents;
   font-weight: bold;
+}
+
+.main-button.general-button span {
+  display: flex;
 }
