@@ -6,7 +6,7 @@ class AppointmentButton extends HTMLElement {
 
     // Create the wrapper
     const wrapper = document.createElement("a");
-    wrapper.setAttribute("class", "contact-appointment");
+    wrapper.setAttribute("class", "main-button");
     wrapper.setAttribute("href", "appointment.html");
 
     // Insert SVG
@@ -24,56 +24,11 @@ class AppointmentButton extends HTMLElement {
     `;
 
     // Add styles
-    const style = document.createElement("style");
-    style.textContent = `
-            .contact-appointment svg path {
-            color: #000000;
-            transition: var(--first-transition);
-            }
+    const link = document.createElement("link");
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("href", "./styles/main-button.css")
 
-            .contact-appointment {
-            background: linear-gradient(180deg, #d6a553, #8f5907);
-            color: #000000;
-            border-radius: var(--border-radius);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0.5rem;
-            transition: var(--first-transition);
-            width: fit-content;
-            gap: 0.5rem;
-            text-decoration: none;
-            text-align: center;
-            }
-
-            .contact-appointment:focus-visible {
-            outline: var(--focus);
-            }
-
-            .contact-content .contact-appointment {
-            margin: 2rem;
-            }
-
-            .contact-appointment:hover {
-            color: #ffff;
-            }
-
-            .contact-appointment:hover svg path {
-            color: #ffff;
-            }
-
-            .contact-appointment svg {
-            min-width: 25px;
-            min-height: 25px;
-            }
-
-            .contact-appointment span {
-            display: contents;
-            font-weight: bold;
-        }
-    `;
-
-    this.shadowRoot.append(style, wrapper);
+    this.shadowRoot.append(link, wrapper);
   }
 }
 
