@@ -163,11 +163,27 @@ dialog {
   position: fixed;
   top: 50%;
   left: 50%;
+  scale: 0;
   transform: translate(-50%, -50%);
+  transform-origin: center;
+  transition: var(--first-transition);
+}
+
+dialog.opened {
+  scale: 1;
+  transition: var(--first-transition);
 }
 
 dialog::backdrop {
+  opacity: 0;
   background: rgba(0, 0, 0, 0.5);
+  transition: var(--first-transition);
+  
+}
+
+dialog.opened::backdrop {
+  opacity: 1;
+  transition: var(--first-transition);
 }
 
 .dialog-content p {

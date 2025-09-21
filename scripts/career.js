@@ -132,17 +132,21 @@ function showDialog() {
   
     dialogContent.innerHTML = html;
     dialog.showModal();
+    dialog.classList.add("opened")
 }
 
 cancelBtn.forEach((button) => {
   button.addEventListener("click", () => {
     dialog.close();
+    dialog.classList.remove("opened")
   })
 })
 
 
 confirmBtn.addEventListener("click", () => {
   dialog.close();
+  dialog.classList.remove("opened")
   form.reset();
   form.submit();
+
 });
