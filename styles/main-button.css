@@ -13,6 +13,7 @@
   text-align: center;
 }
 
+
 .main-button.general-button {
   position: fixed;
   bottom: 1.5625rem;
@@ -44,5 +45,15 @@
 }
 
 .main-button span {
+  display: contents;
   font-weight: bold;
+}
+
+.main-button.header-button span,
+.main-button.general-button span {
+  display: flex;
+}
+
+.main-button.header-button {
+  margin-left: 1rem;
 }
