@@ -154,7 +154,7 @@ input:user-invalid {
 dialog {
   border: none;
   border-radius: 8px;
-  padding: 2.25rem;
+  padding: 4rem;
   margin: 1.25rem;
   width: 50rem;
   height: fit-content;
