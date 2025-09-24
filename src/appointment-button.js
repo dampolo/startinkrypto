@@ -26,7 +26,7 @@ class AppointmentButton extends HTMLElement {
     // Add styles
     const link = document.createElement("link");
     link.setAttribute("rel", "stylesheet");
-    link.setAttribute("href", "./styles/main-button.css")
+    link.setAttribute("href", "./src/styles/main-button.css")
 
     this.shadowRoot.append(link, wrapper);
   }

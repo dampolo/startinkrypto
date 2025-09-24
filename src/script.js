@@ -1,37 +1,3 @@
-async function includeHTML() {
-  const includeElements = document.querySelectorAll("[w3-include-html]");
-  const errorActive = document.querySelector(".error");
-  const errorType = document.querySelector(".error-type");
-
-  for (let i = 0; i < includeElements.length; i++) {
-    const element = includeElements[i];
-    const file = element.getAttribute("w3-include-html");
-    try {
-      const resp = await fetch(file);
-      if (resp.ok) {
-        const html = await resp.text();
-        element.innerHTML = html;
-      } else {
-        errorActive.classList.add("active");
-        errorType.innerHTML = /*html*/ `<span>ERROR ${resp.status}</span>
-                                        <span class="error-title">Upppsss.... TRY AGAIN....</span>`;
-      }
-    } catch (error) {
-      errorActive.classList.add("active");
-      errorType.innerHTML = /*html*/ `<span>ERROR ${error.message}</span>
-                                      <span class="error-title">Upppsss.... TRY AGAIN....</span>`;
-    }
-  }
-  initEventListeners();
-}
-
-includeHTML();
-
-function init() {
-  renderServices();
-}
-
-
 
 const services = [
   {
@@ -51,7 +17,7 @@ const services = [
   },
 ];
 
-function renderServices() {
+export function renderServices() {
   const servicesList = document.querySelector(".road-lists");
   for (let i = 0; i < services.length; i++) {
     const service = services[i];
@@ -67,18 +33,8 @@ function renderServices() {
   }
 }
 
-function initEventListeners() {
-  openMenu();
-  closeMenu();
-  handleLastLinkFocus();
-  handleSpaceClick();
-  handleCloseMenuOnLogo();
-  headerAnimation();
-}
-
-function closeMenu() {
+export function closeMenu() {
   const links = document.querySelectorAll(".nav-link");
-  
   links.forEach((link) => {
     link.addEventListener("click", () => {
       handleCloseMenu();
@@ -94,23 +50,20 @@ function handleCloseMenu() {
       document.querySelector(".hamburger").setAttribute("aria-label", "Öffne das Menu");
 }
 
-function handleCloseMenuOnLogo() {
+export function handleCloseMenuOnLogo() {
   document.querySelector(".logo").addEventListener("focus", () => {
     handleCloseMenu()
   })
 }
 
-function openMenu() {
-  document.querySelector(".hamburger").addEventListener("click", () => {
+export function openMenu() {
     document.querySelector(".hamburger").classList.toggle("is-active");
     document.querySelector(".hamburger").classList.toggle("pos-fix-hamburger");
     document.querySelector(".menu-list").classList.toggle("show-menu");
     document.querySelector(".header").classList.remove("reveal");
     document.querySelector(".header").classList.toggle("menu-open");
-
     toggleAriaLabel();
     toggleAriaExpanded()
-  });
 }
 
 function toggleAriaExpanded() {
@@ -129,7 +82,7 @@ function toggleAriaLabel() {
 }
 
 
-function handleLastLinkFocus() {
+export function handleLastLinkFocus() {
    const links = document.querySelectorAll(".nav-link");  
    const lastLink = links[links.length - 1];
 
@@ -150,7 +103,7 @@ function handleLastLinkFocus() {
     })
 }
 
-function handleSpaceClick() {
+export function handleSpaceClick() {
   const links = document.querySelectorAll(".link");
 
   links.forEach(link => {
@@ -178,7 +131,7 @@ function handleSpaceClick() {
 }
 
 // Animate of header fade-in
-function headerAnimation() {
+export function headerAnimation() {
   const header = document.querySelector(".header");
   
   window.addEventListener("scroll", () => {
