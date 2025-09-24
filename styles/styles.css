@@ -4,7 +4,7 @@
 
 @import "./career.css";
 
-@import "../node_modules/hamburgers/dist/hamburgers.css";
+@import "./hamburgers.css";
 
 :root {
   --main: #000000;
