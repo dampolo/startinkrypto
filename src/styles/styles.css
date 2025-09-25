@@ -17,7 +17,9 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  src: url("/fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 body {
@@ -222,7 +224,7 @@ main {
   margin: 0.5rem auto 0 auto;
   gap: 1rem;
   overflow: hidden;
-  background-image: url("../assets/front-small.jpg");
+  background-image: url("/assets/front-small.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -288,7 +290,7 @@ main {
   padding: 2rem;
   gap: 2rem;
   margin: auto;
-  background: url("../assets/SK-favicon-colorless.svg") center no-repeat;
+  background: url("/assets/SK-favicon-colorless.svg") center no-repeat;
 }
 
 .about-me-img {
@@ -373,7 +375,7 @@ figcaption {
 
 .about-me-description p::before {
   content: "";
-  background-image: url("../assets/direct-hit.webp");
+  background-image: url("/assets/direct-hit.webp");
   background-size: 30px 30px;
   background-repeat: no-repeat;
   position: absolute;
@@ -548,7 +550,7 @@ blockquote footer a:hover {
 
 .service-details li::before {
   content: "";
-  background-image: url("../assets/confirm.svg");
+  background-image: url("/assets/confirm.svg");
   background-size: 30px 30px;
   background-repeat: no-repeat;
   position: absolute;
@@ -737,13 +739,13 @@ summary {
 
 
 summary::after {
-  content: url("../assets/plus.svg");
+  content: url("/assets/plus.svg");
   position: absolute;
   right: 1rem;
 }
 
 details[open] summary::after {
-  content: url("../assets/minus.svg");
+  content: url("/assets/minus.svg");
 }
 
 summary::marker {
@@ -1148,7 +1150,7 @@ details[open]::details-content {
     z-index: 1;
     box-shadow: var(--box-shadow);
     background-color: var(--body-bg);
-    background-image: url(../assets/SK-favicon-colorless.svg);
+    background-image: url("/assets/SK-favicon-colorless.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
