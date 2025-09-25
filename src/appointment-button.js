@@ -1,13 +1,15 @@
+import stylesButton from "./styles/main-button.css?url";
+
+
 class AppointmentButton extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.textContent = 'Jetzt <span>kostenlosen Termin</span> vereinbaren.';
 
     // Create the wrapper
     const wrapper = document.createElement("a");
-    wrapper.setAttribute("class", "main-button");
-    wrapper.setAttribute("href", "appointment.html");
+    wrapper.className = "main-button";
+    wrapper.href = "appointment.html";
 
     // Insert SVG
     wrapper.innerHTML = `
@@ -20,13 +22,13 @@ class AppointmentButton extends HTMLElement {
         <path d="M8 14v4"/>
         <path d="M12 14v4"/>
         <path d="M16 14v4"/>
-      </svg>${this.textContent}
+      </svg>Jetzt <span>kostenlosen Termin</span> vereinbaren.
     `;
 
     // Add styles
     const link = document.createElement("link");
-    link.setAttribute("rel", "stylesheet");
-    link.setAttribute("href", "./src/styles/main-button.css")
+    link.rel = "stylesheet";
+    link.href = stylesButton;
 
     this.shadowRoot.append(link, wrapper);
   }
