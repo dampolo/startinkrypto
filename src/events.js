@@ -1,4 +1,4 @@
-import { openMenu, closeMenu, handleLastLinkFocus, handleSpaceClick, handleCloseMenuOnLogo, headerAnimation, renderServices } from "./script";
+import { openMenu, closeMenu, handleLastLinkFocus, handleSpaceClick, handleCloseMenuOnLogo, headerAnimation } from "./script";
 
 export default function attachedEvents() {
     document.querySelector(".hamburger").addEventListener("click", () => openMenu())
@@ -7,5 +7,4 @@ export default function attachedEvents() {
     handleSpaceClick();
     handleCloseMenuOnLogo();
     headerAnimation();
-    renderServices();
 }

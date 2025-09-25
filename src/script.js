@@ -1,38 +1,4 @@
 
-const services = [
-  {
-    title: "Die wichtigsten Börsen",
-    description:
-      "Zusammen melden wir Dich bei seriösen Börsen an und ich zeige dir, wie du dich dort zurecht findest.",
-  },
-  {
-    title: "Kauf deiner ersten Coins",
-    description:
-      "Gemeinsam machen wir deinen ersten Krypto-Kauf, einfach und sicher.",
-  },
-  {
-    title: "Deine persönliche Wallet",
-    description:
-      "Ich zeige dir, wie du eine sichere Wallet einrichtest und nutzt.",
-  },
-];
-
-export function renderServices() {
-  const servicesList = document.querySelector(".road-lists");
-  for (let i = 0; i < services.length; i++) {
-    const service = services[i];
-    servicesList.innerHTML += /*html*/ `
-        <li>
-          <img width="55" height="55" loading="lazy" class="coin" src="./assets/bitcoin-coin.svg" alt="">
-          <div class="question-answer">
-            <strong class="question">${service.title}</strong>
-            <p class="answer">${service.description}</p>
-          </div>
-        </li>
-      `;
-  }
-}
-
 export function closeMenu() {
   const links = document.querySelectorAll(".nav-link");
   links.forEach((link) => {
