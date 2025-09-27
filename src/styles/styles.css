@@ -540,6 +540,8 @@ blockquote footer a:hover {
   outline: var(--focus);
 }
 
+.dialog .cancel-button,
+.career a,
 .faq a,
 .legacy a,
 .imprint a,
@@ -547,6 +549,8 @@ blockquote footer a:hover {
   align-self: baseline;
 }
 
+.dialog .cancel-button .strong-arrow,
+.career a .strong-arrow,
 .faq a .strong-arrow,
 .legacy a .strong-arrow,
 .imprint a .strong-arrow,
@@ -1062,6 +1066,7 @@ details[open]::details-content {
   position: relative;
 }
 
+.career,
 .faq,
 .legacy,
 .imprint {
@@ -1285,6 +1290,7 @@ details[open]::details-content {
     width: 4rem;
   }
 
+  .career-content,
   .imprint-content,
   .legacy-content {
     padding: 5rem 2rem 2rem 2rem;

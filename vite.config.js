@@ -10,6 +10,7 @@ export default defineConfig({
         appointment: resolve(__dirname, "appointment.html"),
         datenschutz: resolve(__dirname, "datenschutz.html"),
         impressum: resolve(__dirname, "impressum.html"),
+        karriere: resolve(__dirname, "karriere.html"),
       },
     },
   },

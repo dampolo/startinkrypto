@@ -8,9 +8,11 @@ import "hamburgers/dist/hamburgers.css";
 import "./styles/resets.css";
 import "./styles/animations.css";
 import "./styles/main-button.css";
+import "./styles/career.css";
 import "./styles/styles.css";
 
 import "./appointment-button.js"
+import "./career.js";
 import "./script.js";
 
 document.querySelector("header.header").innerHTML = header;
