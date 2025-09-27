@@ -60,7 +60,7 @@ export function getInputCareerValue() {
 }
 
 
-export function submitInputCareerValue() {
+export function submitApply() {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
   
