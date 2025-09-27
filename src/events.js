@@ -1,4 +1,4 @@
-import { getInputCareerValue, submitInputCareerValue } from "./career";
+import { getInputCareerValue, submitApply } from "./career";
 import { openMenu, closeMenu, handleLastLinkFocus, handleSpaceClick, handleCloseMenuOnLogo, headerAnimation } from "./script";
 
 export default function attachedEvents() {
@@ -11,6 +11,6 @@ export default function attachedEvents() {
 
     if (document.querySelector("form")) {
     getInputCareerValue();
-    submitInputCareerValue();
+    submitApply();
   }
 }
