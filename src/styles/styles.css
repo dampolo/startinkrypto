@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+
 :root {
   --main: #000000;
   --primary: #d6a553;
@@ -16,15 +31,26 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
 
 body {
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
 }
 
 main {
@@ -406,11 +432,13 @@ figcaption {
 blockquote {
   display: flex;
   flex-direction: column;
+  font-style: italic;
 }
 
 blockquote footer {
   align-self: flex-end;
   font-weight: 600;
+  font-style: normal;
 }
 
 blockquote footer a:hover {
@@ -437,7 +465,7 @@ blockquote footer a:hover {
 .our-partner-title,
 .why-start-title,
 .about-me-title,
-.service-title
+.service-title,
 .instagram-title
 {
   font-size: 1.5rem;
