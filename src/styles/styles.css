@@ -540,6 +540,7 @@ blockquote footer a:hover {
   outline: var(--focus);
 }
 
+.confirmation a,
 .dialog .cancel-button,
 .career a,
 .faq a,
@@ -549,6 +550,7 @@ blockquote footer a:hover {
   align-self: baseline;
 }
 
+.confirmation a .strong-arrow,
 .dialog .cancel-button .strong-arrow,
 .career a .strong-arrow,
 .faq a .strong-arrow,
@@ -1065,7 +1067,7 @@ details[open]::details-content {
   padding: 7rem 2rem 2rem 2rem;
   position: relative;
 }
-
+.confirmation,
 .career,
 .faq,
 .legacy,
@@ -1086,6 +1088,12 @@ details[open]::details-content {
   margin: auto;
   margin-bottom: 1rem;
 }
+
+.confirmation{
+  justify-content: unset;
+  gap: 1rem;
+}
+
 
 .imprint-title {
   margin-bottom: 1.25rem;
@@ -1158,6 +1166,7 @@ details[open]::details-content {
   overflow: hidden !important;
 }
 
+.confirmation,
 .faq {
   flex: 1;
 }

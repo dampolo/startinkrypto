@@ -11,7 +11,7 @@ import "./styles/main-button.css";
 import "./styles/career.css";
 import "./styles/styles.css";
 
-import "./appointment-button.js"
+import "./appointment-button.js";
 import "./career.js";
 import "./script.js";
 

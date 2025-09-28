@@ -11,6 +11,7 @@ export default defineConfig({
         datenschutz: resolve(__dirname, "datenschutz.html"),
         impressum: resolve(__dirname, "impressum.html"),
         karriere: resolve(__dirname, "karriere.html"),
+        confirmation: resolve(__dirname, "confirmation.html"),
       },
     },
   },

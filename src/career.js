@@ -148,11 +148,15 @@ cancelBtn.forEach((button) => {
 })
 
 
-export function confirmData() {
+export function confirmApply() {
   confirmBtn.addEventListener("click", () => {
     dialog.close();
-    dialog.classList.remove("opened")
+    dialog.classList.remove("opened");
+
+    const formData = new FormData(form);
+    const firstname = formData.get("first-name");
+
     form.reset();
-    form.submit();
+    location.href = `confirmation.html?firstname=${encodeURIComponent(firstname)}`;
   });
 }
