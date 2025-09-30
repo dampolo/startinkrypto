@@ -149,14 +149,30 @@ cancelBtn.forEach((button) => {
 
 
 export function confirmApply() {
-  confirmBtn.addEventListener("click", () => {
-    dialog.close();
-    dialog.classList.remove("opened");
+    confirmBtn.addEventListener("click", () => {
+        dialog.close();
+        dialog.classList.remove("opened");
 
-    const formData = new FormData(form);
-    const firstname = formData.get("first-name");
+        const formData = new FormData(form);
+        const firstname = formData.get("first-name");
 
-    form.reset();
-    location.href = `confirmation.html?firstname=${encodeURIComponent(firstname)}`;
+        sendData(formData)
+        
+        form.reset();
+        location.href = `confirmation.html?firstname=${encodeURIComponent(firstname)}`;
+    });
+}
+
+async function sendData(formData) {
+    // turn into plain object
+  const data = Object.fromEntries(formData.entries());
+  console.log("Payload:", data);
+
+  const res = await fetch("http://127.0.0.1:8000/api/apply/", {
+      method: "POST",
+      body: formData,
   });
+
+  const json = await res.json();
+  console.log("Response:", json);
 }
