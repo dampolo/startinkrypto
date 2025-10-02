@@ -167,7 +167,8 @@ async function sendData(formData) {
     const firstname = formData.get("first-name"); 
 
     if (!res.ok) {
-      location.href = `error.html?firstname=${encodeURIComponent(firstname)}`;
+      location.href = "error.html";
+      return
     }
 
     form.reset();
