@@ -154,25 +154,26 @@ export function confirmApply() {
         dialog.classList.remove("opened");
 
         const formData = new FormData(form);
-        const firstname = formData.get("first-name");
-
         sendData(formData)
-        
-        form.reset();
-        location.href = `confirmation.html?firstname=${encodeURIComponent(firstname)}`;
     });
 }
 
 async function sendData(formData) {
-    // turn into plain object
-  const data = Object.fromEntries(formData.entries());
-  console.log("Payload:", data);
+  try {
+    const res = await fetch("http://127.0.0.1:8000/api/apply/", {
+        method: "POST",
+        body: formData,
+    });
+    const firstname = formData.get("first-name"); 
 
-  const res = await fetch("http://127.0.0.1:8000/api/apply/", {
-      method: "POST",
-      body: formData,
-  });
+    if (!res.ok) {
+      location.href = `error.html?firstname=${encodeURIComponent(firstname)}`;
+    }
 
-  const json = await res.json();
-  console.log("Response:", json);
+    form.reset();
+    location.href = `confirmation.html?firstname=${encodeURIComponent(firstname)}`;
+
+  } catch (error) {
+      location.href = "error.html";
+  }
 }

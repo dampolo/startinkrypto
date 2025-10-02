@@ -12,6 +12,8 @@ export default defineConfig({
         impressum: resolve(__dirname, "impressum.html"),
         karriere: resolve(__dirname, "karriere.html"),
         confirmation: resolve(__dirname, "confirmation.html"),
+        error: resolve(__dirname, "error.html"),
+
       },
     },
   },

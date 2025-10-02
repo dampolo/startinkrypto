@@ -540,6 +540,7 @@ blockquote footer a:hover {
   outline: var(--focus);
 }
 
+.error a,
 .confirmation a,
 .dialog .cancel-button,
 .career a,
@@ -550,6 +551,7 @@ blockquote footer a:hover {
   align-self: baseline;
 }
 
+.error a .strong-arrow,
 .confirmation a .strong-arrow,
 .dialog .cancel-button .strong-arrow,
 .career a .strong-arrow,
@@ -1067,6 +1069,8 @@ details[open]::details-content {
   padding: 7rem 2rem 2rem 2rem;
   position: relative;
 }
+
+.error,
 .confirmation,
 .career,
 .faq,
@@ -1082,13 +1086,13 @@ details[open]::details-content {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--content-color);
-  padding: 2rem;
   padding: 7rem 2rem 2rem 2rem;
   position: relative;
   margin: auto;
   margin-bottom: 1rem;
 }
 
+.error,
 .confirmation{
   justify-content: unset;
   gap: 1rem;
@@ -1133,10 +1137,6 @@ details[open]::details-content {
   word-break: break-all;
 }
 
-.error {
-  display: none;
-}
-
 .active {
   position: fixed;
   top: 0;
@@ -1166,6 +1166,7 @@ details[open]::details-content {
   overflow: hidden !important;
 }
 
+.error,
 .confirmation,
 .faq {
   flex: 1;
@@ -1299,11 +1300,14 @@ details[open]::details-content {
     width: 4rem;
   }
 
-  .career-content,
-  .imprint-content,
-  .legacy-content {
-    padding: 5rem 2rem 2rem 2rem;
-  }
+.error,
+.confirmation,
+.career,
+.faq,
+.legacy,
+.imprint {
+  padding: 5rem 2rem 2rem 2rem;
+}
 
   .service .service-description p {
     line-height: 1.5;
