@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "./config";
+import { API_BASE_URL, APPLY_URL } from "./config";
 
 const form = document.querySelector("form");
 
@@ -162,8 +162,7 @@ export function confirmApply() {
 
 async function sendData(formData) {
   try {
-    debugger
-    const res = await fetch(API_BASE_URL, {
+    const res = await fetch(`${API_BASE_URL}${APPLY_URL}`, {
         method: "POST",
         body: formData,
     });
