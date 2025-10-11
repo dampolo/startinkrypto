@@ -1,3 +1,5 @@
+import { API_BASE_URL } from "./config";
+
 const form = document.querySelector("form");
 
 function validateField(field) {
@@ -160,7 +162,8 @@ export function confirmApply() {
 
 async function sendData(formData) {
   try {
-    const res = await fetch("http://127.0.0.1:8000/api/apply/", {
+    debugger
+    const res = await fetch(API_BASE_URL, {
         method: "POST",
         body: formData,
     });

@@ -13,6 +13,7 @@ import "./styles/styles.css";
 
 import "./appointment-button.js";
 import "./career.js";
+import "./config.js";
 import "./script.js";
 
 document.querySelector("header.header").innerHTML = header;
