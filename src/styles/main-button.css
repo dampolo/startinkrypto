@@ -19,6 +19,12 @@
   bottom: 1.5625rem;
   right: 1.5625rem;
   z-index: 1000;
+  opacity: .5;
+  transition: var(--first-transition);
+}
+
+.main-button.general-button:hover {
+  opacity: 1;
 }
 
 .main-button svg path {
