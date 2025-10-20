@@ -6,44 +6,38 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
-      - name: Checkout code
+      # Step 1: Checkout (optional – only to verify the workflow syntax)
+      - name: Checkout repository
         uses: actions/checkout@v3
-
-      # Step 2: Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          fetch-depth: 0
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-      # Step 4: Build project
-      - name: Build project
-        run: npm run build
-
-      # Step 5: Deploy to server via SSH
-      - name: Deploy to Server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "dist/*"
-          target: "/var/www/startinkrypto/dist"
-
-      # Step 6: Reload Nginx
-      - name: Reload Nginx
+      # Step 2: Deploy via SSH
+      - name: Pull latest code, build, and reload Nginx on server
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
+            set -e
+            cd /var/www/startinkrypto
+
+            echo "Fetching latest code..."
+            git fetch origin master
+            git reset --hard origin/master
+
+            echo "Installing dependencies..."
+            npm ci
+
+            echo "Building project..."
+            npm run build
+
+            echo "Reloading Nginx..."
             sudo systemctl reload nginx
+
+            echo "✅ Deployment completed successfully!"
