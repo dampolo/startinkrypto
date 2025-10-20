@@ -166,15 +166,15 @@ async function sendData(formData) {
         method: "POST",
         body: formData,
     });
-    const firstname = formData.get("first-name"); 
+    // const firstname = formData.get("first-name"); 
 
     if (!res.ok) {
       location.href = "error.html";
       return
     }
 
-    form.reset();
-    location.href = `confirmation.html?firstname=${encodeURIComponent(firstname)}`;
+    // form.reset();
+    // location.href = `confirmation.html?firstname=${encodeURIComponent(firstname)}`;
 
   } catch (error) {
       location.href = "error.html";
