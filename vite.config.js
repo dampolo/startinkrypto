@@ -7,7 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "about_me.html"),
-        appointment: resolve(__dirname, "appointment.html"),
+        termin: resolve(__dirname, "termin.html"),
         datenschutz: resolve(__dirname, "datenschutz.html"),
         impressum: resolve(__dirname, "impressum.html"),
       },
