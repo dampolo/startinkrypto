@@ -1060,6 +1060,7 @@ details[open]::details-content {
   padding: 2rem;
   padding: 7rem 2rem 2rem 2rem;
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .faq,
