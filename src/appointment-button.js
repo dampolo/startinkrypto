@@ -8,7 +8,7 @@ class AppointmentButton extends HTMLElement {
     // Create the wrapper
     const wrapper = document.createElement("a");
     wrapper.className = "main-button";
-    wrapper.href = "appointment.html";
+    wrapper.href = "termin.html";
 
     // Insert SVG
     wrapper.innerHTML = `
