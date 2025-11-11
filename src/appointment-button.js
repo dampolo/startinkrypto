@@ -1,6 +1,5 @@
 import stylesButton from "./styles/main-button.css?url";
 
-
 class AppointmentButton extends HTMLElement {
   constructor() {
     super();
