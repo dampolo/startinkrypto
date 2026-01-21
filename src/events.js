@@ -1,10 +1,21 @@
-import { openMenu, closeMenu, handleLastLinkFocus, handleSpaceClick, handleCloseMenuOnLogo, headerAnimation } from "./script";
+import {
+  openMenu,
+  closeMenu,
+  handleLastLinkFocus,
+  handleSpaceClick,
+  handleCloseMenuOnLogo,
+  headerAnimation,
+  getCurrentYear
+} from "./script";
 
 export default function attachedEvents() {
-    document.querySelector(".hamburger").addEventListener("click", () => openMenu())
-    closeMenu();
-    handleLastLinkFocus();
-    handleSpaceClick();
-    handleCloseMenuOnLogo();
-    headerAnimation();
+  document
+    .querySelector(".hamburger")
+    .addEventListener("click", () => openMenu());
+  closeMenu();
+  handleLastLinkFocus();
+  handleSpaceClick();
+  handleCloseMenuOnLogo();
+  headerAnimation();
+  getCurrentYear();
 }

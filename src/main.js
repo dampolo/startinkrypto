@@ -2,6 +2,8 @@
 import header from "./templates/header.html?raw";
 import footer from "./templates/footer.html?raw";
 import attachedEvents from "./events.js";
+import { getCurrentYear } from "./script.js";
+
 
 
 import "hamburgers/dist/hamburgers.css";

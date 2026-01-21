@@ -111,3 +111,7 @@ export function headerAnimation() {
     }
   });
 }
+
+export function getCurrentYear() {
+  document.querySelector(".year").textContent = new Date().getFullYear();
+}
