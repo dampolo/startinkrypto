@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -11,7 +12,6 @@
   font-weight: 100 900;
   font-style: normal;
 }
-
 
 :root {
   --main: #000000;
@@ -32,7 +32,8 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -49,7 +50,9 @@ body {
   font-size: 16px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -76,6 +79,10 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.welcome {
+  position: relative;
 }
 
 /* HEADER */
@@ -255,6 +262,12 @@ main {
   background-repeat: no-repeat;
 }
 
+.bitcoin {
+  position: absolute;
+  left: 6rem;
+  top: 14rem;
+}
+
 .welcome .welcome-content {
   font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
@@ -299,7 +312,6 @@ main {
 
 .why-start-in-krypto-content {
   display: flex;
-  
 }
 
 .why-start-in-krypto {
@@ -326,7 +338,6 @@ main {
   width: 10.5rem;
 }
 
-
 .why-start-in-krypto-img {
   object-fit: cover;
   height: 60vh;
@@ -343,7 +354,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.why-start-in-krypto-img-figcaption{
+.why-start-in-krypto-img-figcaption {
   display: none;
 }
 
@@ -394,7 +405,7 @@ figcaption {
   position: relative;
 }
 
-.service-description img{
+.service-description img {
   width: 3rem;
   height: 3rem;
 }
@@ -467,8 +478,7 @@ blockquote footer a:hover {
 .why-start-title,
 .about-me-title,
 .service-title,
-.instagram-title
-{
+.instagram-title {
   font-size: 1.5rem;
   text-align: center;
 }
@@ -770,7 +780,6 @@ summary {
   padding-right: 2rem;
 }
 
-
 summary::after {
   content: url("/assets/plus.svg");
   position: absolute;
@@ -787,7 +796,7 @@ summary::marker {
 
 /* For Safari */
 details::-webkit-details-marker {
-    display: none
+  display: none;
 }
 
 summary:hover {
@@ -801,7 +810,9 @@ details {
 }
 
 details::details-content {
-  transition: block-size 1s, content-visibility 1s allow-discrete;
+  transition:
+    block-size 1s,
+    content-visibility 1s allow-discrete;
   overflow: hidden;
   block-size: 0;
 }
@@ -1147,11 +1158,11 @@ details[open]::details-content {
 
 .visually-hidden {
   position: absolute !important;
-  width: 1px  !important;
-  height: 1px  !important;
-  margin: -1px  !important;
-  border: 0  !important;
-  padding: 0  !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
 
   white-space: nowrap !important;
   clip-path: inset(100%) !important;
@@ -1246,9 +1257,7 @@ details[open]::details-content {
     width: 168px;
     height: 168px;
   }
-  
 }
-
 
 @media (max-height: 400px) {
   .main-nav ul {
@@ -1283,7 +1292,11 @@ details[open]::details-content {
   .welcome .welcome-content p {
     padding-inline: 0;
   }
-
+  .bitcoin {
+    position: absolute;
+    left: 3rem;
+    top: 24rem;
+  }
   .top-left,
   .top-right,
   .bottom-left,
