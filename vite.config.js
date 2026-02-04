@@ -9,6 +9,7 @@ export default defineConfig({
         termin: resolve(__dirname, "termin.html"),
         datenschutz: resolve(__dirname, "datenschutz.html"),
         impressum: resolve(__dirname, "impressum.html"),
+        faq: resolve(__dirname, "faq.html"),
       },
     },
   },

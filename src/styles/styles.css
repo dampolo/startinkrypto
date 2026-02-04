@@ -716,8 +716,12 @@ blockquote footer a:hover {
   gap: 1rem;
 }
 
-.partner-list {
+.faq-list-content {
+  max-width: 62.5rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block: .625rem;
 }
 
 .partner-list details {
@@ -776,7 +780,6 @@ summary {
   transition: var(--first-transition);
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
   padding-right: 2rem;
 }
 
@@ -807,6 +810,8 @@ details {
   position: relative;
   padding: 10px;
   interpolate-size: allow-keywords;
+  max-width: 1000px;
+  width: 100%;
 }
 
 details::details-content {
@@ -1063,6 +1068,8 @@ details[open]::details-content {
   margin-top: 0.5rem;
 }
 
+
+
 .appointment-content {
   display: flex;
   flex-direction: column;
@@ -1168,10 +1175,6 @@ details[open]::details-content {
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
-}
-
-.faq {
-  flex: 1;
 }
 
 @media (max-width: 950px) {
@@ -1324,5 +1327,9 @@ details[open]::details-content {
 
   .contact-appointment {
     text-align: center;
+  }
+
+  .faq, .legacy, .imprint {
+    padding: 5rem 2rem 2rem 2rem;
   }
 }
