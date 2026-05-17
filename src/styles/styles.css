@@ -721,7 +721,7 @@ blockquote footer a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-block: .625rem;
+  padding-block: 0.625rem;
 }
 
 .partner-list details {
@@ -1068,8 +1068,6 @@ details[open]::details-content {
   margin-top: 0.5rem;
 }
 
-
-
 .appointment-content {
   display: flex;
   flex-direction: column;
@@ -1329,7 +1327,9 @@ details[open]::details-content {
     text-align: center;
   }
 
-  .faq, .legacy, .imprint {
+  .faq,
+  .legacy,
+  .imprint {
     padding: 5rem 2rem 2rem 2rem;
   }
 }
