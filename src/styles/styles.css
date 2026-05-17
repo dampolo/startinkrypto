@@ -786,9 +786,9 @@ summary {
   scale: 1;
   cursor: pointer;
   transition: var(--first-transition);
-  text-overflow: ellipsis;
   overflow: hidden;
-  padding-right: 2rem;
+  text-overflow: ellipsis;
+  padding-right: 3rem;
 }
 
 summary::after {
