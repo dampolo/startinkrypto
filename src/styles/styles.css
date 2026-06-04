@@ -264,8 +264,8 @@ main {
 
 .bitcoin {
   position: absolute;
-  left: 6rem;
-  top: 14rem;
+  left: 3rem;
+  top: 9rem;
 }
 
 .welcome .welcome-content {
@@ -278,7 +278,7 @@ main {
 .welcome-content h1 {
   text-align: center;
   font-size: clamp(2.5rem, 3.5vw, 6.5rem);
-  margin-top: -15rem;
+  margin-top: -10rem;
 }
 
 .welcome-content p {
@@ -1296,13 +1296,9 @@ details[open]::details-content {
   }
 
   .welcome .welcome-content p {
-    padding-inline: 0;
+    padding-inline: 1rem;
   }
-  .bitcoin {
-    position: absolute;
-    left: 3rem;
-    top: 24rem;
-  }
+
   .top-left,
   .top-right,
   .bottom-left,
@@ -1336,5 +1332,11 @@ details[open]::details-content {
   .legacy,
   .imprint {
     padding: 5rem 2rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .bitcoin {
+    top: 38rem;
   }
 }

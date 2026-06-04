@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
     <head>
             <meta charset="UTF-8">
@@ -86,12 +86,11 @@
                     </li>
                 </ul>
                     <figure class="why-start-in-krypto-figure">
-                        <img loading="lazy" class="why-start-in-krypto-img"
-                        srcset="./assets/ela2-small.jpg 512w,
-                                ./assets/ela2-mittle.jpg 950w,
-                                ./assets/ela2-big.png"
-                        alt="Elisabeth">
-
+                        <picture>
+                            <source media="(max-width: 512px)" srcset="./assets/ela2-small.jpg">
+                            <source media="(max-width: 950px)" srcset="./assets/ela2-mittle.jpg">
+                            <img class="why-start-in-krypto-img" src="./assets/ela2-big.png" alt="Elisabeth">
+                        </picture>
                         <figcaption class="why-start-in-krypto-img-figcaption">Elisabeth</figcaption>
                     </figure>
             </div>
@@ -231,7 +230,8 @@
                     Über mich - Elisabeth
                 </h2>
                 
-                <img width="168" height="168" loading="lazy" class="about-me-img" src="./assets/ela-big.jpg" 
+                <img width="168" height="168" loading="lazy" class="about-me-img" 
+                                src="./assets/ela-big.jpg" 
                                 srcset="./assets/ela-small.jpg 500w,
                                         ./assets/ela-mittle.jpg 1000w,
                                         ./assets/ela-big.jpg 1500w"
@@ -259,7 +259,7 @@
         <section class="review" id="Rezensionen">
             <h2 class="visually-hidden">Rezensionen</h2>
             <div class="review-content">
-                <div class="review-star" aria-label="5 Stärne">
+                <div class="review-star" role="img" aria-label="5 Sterne">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
@@ -282,7 +282,7 @@
             </div>
 
             <div class="review-content">
-                <div class="review-star" aria-label="5 Stärne">
+                <div class="review-star" role="img" aria-label="5 Sterne">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
@@ -303,7 +303,7 @@
                 </blockquote>
             </div>
             <div class="review-content">
-                <div class="review-star" aria-label="5 Stärne">
+                <div class="review-star" role="img" aria-label="5 Sterne">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
@@ -332,7 +332,7 @@
                 </blockquote>
             </div>
             <div class="review-content">
-                <div class="review-star" aria-label="5 Stärne">
+                <div class="review-star" role="img" aria-label="5 Sterne">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
@@ -359,7 +359,7 @@
                 </blockquote>
             </div>
             <div class="review-content">
-                <div class="review-star" aria-label="5 Stärne">
+                <div class="review-star" role="img" aria-label="5 Sterne">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
                     <img height="24" width="24" loading="lazy" src="./assets/star.svg" alt="">
