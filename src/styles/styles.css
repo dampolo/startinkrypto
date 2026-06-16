@@ -1338,4 +1338,7 @@ details[open]::details-content {
   .header {
     position: static;
   }
+  .welcome {
+    height: 100dvh;
+  }
 }
