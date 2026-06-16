@@ -1339,6 +1339,6 @@ details[open]::details-content {
     position: static;
   }
   .welcome {
-    height: 100dvh;
+    min-height: 20rem;
   }
 }
