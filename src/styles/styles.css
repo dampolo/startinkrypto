@@ -1340,5 +1340,6 @@ details[open]::details-content {
   }
   .welcome {
     min-height: 20rem;
+    background-attachment: local;
   }
 }
