@@ -1335,6 +1335,9 @@ details[open]::details-content {
 
 
 @media (max-height: 1100px) and (min-width: 700px) {
+  .header {
+    position: static;
+  }
   .welcome{
     padding-top: 12rem;
   }
@@ -1342,4 +1345,5 @@ details[open]::details-content {
   .main-nav .show-menu {
     padding-top: 13.75rem;
   }
+
 }
