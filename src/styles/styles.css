@@ -1213,6 +1213,7 @@ details[open]::details-content {
 
   .main-nav .show-menu {
     display: flex;
+    padding-top: 13.75rem;
   }
 
   .main-nav .pos-fix-hamburger {
@@ -1333,5 +1334,12 @@ details[open]::details-content {
 @media (max-width: 850px) {
   .bitcoin {
     top: 38rem;
+  }
+}
+
+
+@media (max-height: 1100px) and (min-width: 700px) {
+  .welcome{
+    padding-top: 12rem;
   }
 }
