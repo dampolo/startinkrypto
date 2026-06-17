@@ -1342,4 +1342,9 @@ details[open]::details-content {
     min-height: 20rem;
     background-attachment: local;
   }
+
+  .faq, .legacy, .imprint {
+    padding: 2rem;
+    margin-block: 1rem;
+  }
 }
